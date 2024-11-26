@@ -400,7 +400,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: 0
-  speed: 0
+  speed: 4
   currentHealth: {fileID: 0}
   playerHealthSignal: {fileID: 0}
 --- !u!212 &1112463784

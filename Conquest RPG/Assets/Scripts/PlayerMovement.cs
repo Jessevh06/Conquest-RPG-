@@ -55,20 +55,50 @@ public class PlayerMovement : MonoBehaviour
         yield return new WaitForSeconds(.1f);
         currentState = PlayerState.walk;
     }
+    //void UpdateAnimationAndMove()
+    //{
+    //    if (change != Vector3.zero)
+    //    {
+    //        MoveCharacter();
+    //        animator.SetFloat("moveX", change.x);
+    //        animator.SetFloat("moveY", change.y);
+    //        animator.SetBool("moving", true);
+
+    //    }
+    //    else
+    //    {
+    //        animator.SetBool("moving", false);
+    //    }
+    //}
+
+
     void UpdateAnimationAndMove()
     {
         if (change != Vector3.zero)
         {
             MoveCharacter();
+
+            // Update de animator parameters
             animator.SetFloat("moveX", change.x);
             animator.SetFloat("moveY", change.y);
             animator.SetBool("moving", true);
+
+            // Spiegel het object als het naar links beweegt
+            if (change.x < 0)
+            {
+                transform.localScale = new Vector3(-1, 1, 1); // Spiegel op de X-as
+            }
+            else if (change.x > 0)
+            {
+                transform.localScale = new Vector3(1, 1, 1); // Normaal op de X-as
+            }
         }
         else
         {
             animator.SetBool("moving", false);
         }
     }
+
 
     void MoveCharacter()
     {
