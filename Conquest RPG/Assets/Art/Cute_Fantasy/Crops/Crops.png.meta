@@ -1005,28 +1005,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crops_29
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 304
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e9ce1d8a174024e70800000000000000
-      internalID: 9097839083451968670
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Crops_32
       rect:
         serializedVersion: 2
@@ -2397,7 +2375,7 @@ TextureImporter:
         x: 96
         y: 32
         width: 16
-        height: 16
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

@@ -88,7 +88,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -102,7 +102,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -126,7 +126,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -167,10 +167,10 @@ TextureImporter:
       name: Player_Bow_Anim._0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 70
-        width: 15
-        height: 21
+        x: 0
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -189,10 +189,10 @@ TextureImporter:
       name: Player_Bow_Anim._1
       rect:
         serializedVersion: 2
-        x: 40
-        y: 70
-        width: 15
-        height: 22
+        x: 32
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -211,10 +211,10 @@ TextureImporter:
       name: Player_Bow_Anim._2
       rect:
         serializedVersion: 2
-        x: 72
-        y: 70
-        width: 15
-        height: 22
+        x: 64
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -233,10 +233,10 @@ TextureImporter:
       name: Player_Bow_Anim._3
       rect:
         serializedVersion: 2
-        x: 104
-        y: 70
-        width: 15
-        height: 22
+        x: 96
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -255,10 +255,10 @@ TextureImporter:
       name: Player_Bow_Anim._4
       rect:
         serializedVersion: 2
-        x: 136
-        y: 70
-        width: 15
-        height: 22
+        x: 128
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -277,10 +277,10 @@ TextureImporter:
       name: Player_Bow_Anim._5
       rect:
         serializedVersion: 2
-        x: 168
-        y: 70
-        width: 15
-        height: 22
+        x: 160
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -299,10 +299,10 @@ TextureImporter:
       name: Player_Bow_Anim._6
       rect:
         serializedVersion: 2
-        x: 9
-        y: 38
-        width: 17
-        height: 21
+        x: 0
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -321,10 +321,10 @@ TextureImporter:
       name: Player_Bow_Anim._7
       rect:
         serializedVersion: 2
-        x: 41
-        y: 38
-        width: 15
-        height: 21
+        x: 32
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -343,10 +343,10 @@ TextureImporter:
       name: Player_Bow_Anim._8
       rect:
         serializedVersion: 2
-        x: 72
-        y: 38
-        width: 15
-        height: 21
+        x: 64
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -365,10 +365,10 @@ TextureImporter:
       name: Player_Bow_Anim._9
       rect:
         serializedVersion: 2
-        x: 105
-        y: 38
-        width: 15
-        height: 22
+        x: 96
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -387,10 +387,10 @@ TextureImporter:
       name: Player_Bow_Anim._10
       rect:
         serializedVersion: 2
-        x: 137
-        y: 38
-        width: 15
-        height: 22
+        x: 128
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -409,10 +409,10 @@ TextureImporter:
       name: Player_Bow_Anim._11
       rect:
         serializedVersion: 2
-        x: 169
-        y: 38
-        width: 15
-        height: 22
+        x: 160
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -431,10 +431,10 @@ TextureImporter:
       name: Player_Bow_Anim._12
       rect:
         serializedVersion: 2
-        x: 8
-        y: 6
-        width: 15
-        height: 21
+        x: 0
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -453,10 +453,10 @@ TextureImporter:
       name: Player_Bow_Anim._13
       rect:
         serializedVersion: 2
-        x: 40
-        y: 6
-        width: 15
-        height: 22
+        x: 32
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -475,10 +475,10 @@ TextureImporter:
       name: Player_Bow_Anim._14
       rect:
         serializedVersion: 2
-        x: 72
-        y: 6
-        width: 15
-        height: 22
+        x: 64
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -497,10 +497,10 @@ TextureImporter:
       name: Player_Bow_Anim._15
       rect:
         serializedVersion: 2
-        x: 104
-        y: 6
-        width: 15
-        height: 22
+        x: 96
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -519,10 +519,10 @@ TextureImporter:
       name: Player_Bow_Anim._16
       rect:
         serializedVersion: 2
-        x: 136
-        y: 6
-        width: 15
-        height: 22
+        x: 128
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -541,10 +541,10 @@ TextureImporter:
       name: Player_Bow_Anim._17
       rect:
         serializedVersion: 2
-        x: 168
-        y: 6
-        width: 15
-        height: 22
+        x: 160
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -563,7 +563,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: ce1f6e32abfbbdf4db5f95c83e6324c9
     internalID: 0
     vertices: []
     indices: 
