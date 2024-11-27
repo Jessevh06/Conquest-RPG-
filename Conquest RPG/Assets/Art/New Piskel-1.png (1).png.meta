@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: e27bf4f072eed8d4b9e08a5d610e82e6
+guid: 3704a492ff5a71a468dfec0428913e26
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9124377884577567971
-    second: Bow_Stages_0
+      213: -4518853377557969270
+    second: New Piskel-1.png (1)_0
   - first:
-      213: -8530258503782808283
-    second: Bow_Stages_1
+      213: 8781319971161819565
+    second: New Piskel-1.png (1)_1
   - first:
-      213: -8037461968726066685
-    second: Bow_Stages_2
+      213: -7055797857585111720
+    second: New Piskel-1.png (1)_2
   - first:
-      213: -2560743057714492868
-    second: Bow_Stages_3
+      213: -5511923743366053474
+    second: New Piskel-1.png (1)_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -55,12 +55,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -122,155 +122,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bow_Stages_0
+      name: New Piskel-1.png (1)_0
       rect:
         serializedVersion: 2
-        x: 9
-        y: 0
+        x: 2
+        y: 8
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8645968bcec941c0800000000000000
+      internalID: -4518853377557969270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New Piskel-1.png (1)_1
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 2
         width: 8
-        height: 16
+        height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d1be25138a2bf5180800000000000000
-      internalID: -9124377884577567971
+      spriteID: da9c4240df38dd970800000000000000
+      internalID: 8781319971161819565
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bow_Stages_1
+      name: New Piskel-1.png (1)_2
       rect:
         serializedVersion: 2
-        x: 16
-        y: 1
-        width: 14
-        height: 14
+        x: 8
+        y: 8
+        width: 6
+        height: 6
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 52545c7061f6e9980800000000000000
-      internalID: -8530258503782808283
+      spriteID: 85d5da35b35c41e90800000000000000
+      internalID: -7055797857585111720
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bow_Stages_2
+      name: New Piskel-1.png (1)_3
       rect:
         serializedVersion: 2
-        x: 29
-        y: 0
-        width: 13
-        height: 16
+        x: 8
+        y: 2
+        width: 6
+        height: 6
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 30afe5a7ce2357090800000000000000
-      internalID: -8037461968726066685
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bow_Stages_3
-      rect:
-        serializedVersion: 2
-        x: 41
-        y: 0
-        width: 7
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c3a41e3a1c9667cd0800000000000000
-      internalID: -2560743057714492868
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bow_Stages_4
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 13
-        width: 13
-        height: 3
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f5d2571cee954d941ac66b868b6e82d1
-      internalID: -1005258272
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bow_Stages_5
-      rect:
-        serializedVersion: 2
-        x: 61
-        y: 0
-        width: 3
-        height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: eefe9d92d2e81b64b801c6374e0d3021
-      internalID: -1633893504
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bow_Stages_6
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 0
-        width: 12
-        height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2e267c69b3f1eb24a882f275f16a846f
-      internalID: -778895612
+      spriteID: e9100af0f86b183b0800000000000000
+      internalID: -5511923743366053474
       vertices: []
       indices: 
       edges: []
@@ -279,7 +213,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: fc102bd8ea155ee49812f9ad45c01df2
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -289,13 +223,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Bow_Stages_0: -9124377884577567971
-      Bow_Stages_1: -8530258503782808283
-      Bow_Stages_2: -8037461968726066685
-      Bow_Stages_3: -2560743057714492868
-      Bow_Stages_4: -1005258272
-      Bow_Stages_5: -1633893504
-      Bow_Stages_6: -778895612
+      New Piskel-1.png (1)_0: -4518853377557969270
+      New Piskel-1.png (1)_1: 8781319971161819565
+      New Piskel-1.png (1)_2: -7055797857585111720
+      New Piskel-1.png (1)_3: -5511923743366053474
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
