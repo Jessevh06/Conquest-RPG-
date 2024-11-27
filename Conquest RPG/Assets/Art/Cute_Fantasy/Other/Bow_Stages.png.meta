@@ -46,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -60,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -84,7 +84,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -125,9 +125,9 @@ TextureImporter:
       name: Bow_Stages_0
       rect:
         serializedVersion: 2
-        x: 9
+        x: 10
         y: 0
-        width: 8
+        width: 6
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -147,10 +147,10 @@ TextureImporter:
       name: Bow_Stages_1
       rect:
         serializedVersion: 2
-        x: 16
-        y: 1
-        width: 14
-        height: 14
+        x: 17
+        y: 2
+        width: 12
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -169,10 +169,10 @@ TextureImporter:
       name: Bow_Stages_2
       rect:
         serializedVersion: 2
-        x: 29
-        y: 0
-        width: 13
-        height: 16
+        x: 30
+        y: 1
+        width: 11
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,7 +193,7 @@ TextureImporter:
         serializedVersion: 2
         x: 41
         y: 0
-        width: 23
+        width: 7
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -209,11 +209,77 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Bow_Stages_4
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 0
+        width: 3
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cc34b840512e034a9d771a1c417becb
+      internalID: -838756917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bow_Stages_5
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 13
+        width: 13
+        height: 3
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a7db0045635a87499f7b0b33e71c46e
+      internalID: -1326321539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bow_Stages_6
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e04b2c2034f7f848a6b5bb143128b72
+      internalID: 1056554838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 073291b4adc035d4a9837c627dfb8520
     internalID: 0
     vertices: []
     indices: 
@@ -227,6 +293,9 @@ TextureImporter:
       Bow_Stages_1: -8530258503782808283
       Bow_Stages_2: -8037461968726066685
       Bow_Stages_3: -2560743057714492868
+      Bow_Stages_4: -838756917
+      Bow_Stages_5: -1326321539
+      Bow_Stages_6: 1056554838
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
