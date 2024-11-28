@@ -63,34 +63,36 @@ public class Bow : MonoBehaviour
 
     private IEnumerator ShootArrowWithAnimation()
     {
-        // Start de schietanimatie
         isShooting = true;
         animator.SetBool("shooting", true);
 
+        // Wacht tot de huidige animatie is afgelopen
         yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
 
         // Stop de schietanimatie
         animator.SetBool("shooting", false);
+
+        // Wacht tot de animator daadwerkelijk terugkeert naar een niet-schietstaat
+        while (!animator.GetCurrentAnimatorStateInfo(0).IsName("Idle")) // Vervang "Idle" door de juiste niet-schietanimatienaam
+        {
+            yield return null; // Wacht een frame
+        }
+
+        // Markeer dat de speler klaar is om opnieuw te schieten
         isShooting = false;
 
-        // Schiet de pijl direct af zonder te wachten op de animatie
+        // Schiet de pijl af
         if (CanShootInDirection())
         {
-            // Maak een pijl en positioneer deze bij de boog
             Vector3 targetPosition = crossHair.transform.position;
             GameObject arrow = Instantiate(arrowPrefab, transform.position, Quaternion.identity);
 
-            // Bereken de richting van de pijl naar de crosshair
             Vector2 direction = (targetPosition - transform.position).normalized;
-
-            // Draai de pijl zodat deze naar de crosshair wijst
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
             arrow.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
 
-            // Zet de snelheid van de pijl in de richting van de crosshair
             arrow.GetComponent<Rigidbody2D>().linearVelocity = direction * arrowSpeed;
         }
-
     }
 
 
