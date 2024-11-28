@@ -122,15 +122,19 @@ public class PlayerMovement : MonoBehaviour
             this.gameObject.SetActive(false);
         }
         
-    }
+    }//
     private IEnumerator KnockCo(float knockTime)
     {
-        if (myRigidbody != null) { 
+        Debug.Log("knockback snapje");
+        if (myRigidbody != null)
+        {
             yield return new WaitForSeconds(knockTime);
             myRigidbody.linearVelocity = Vector2.zero;
             currentState = PlayerState.idle;
             myRigidbody.linearVelocity = Vector2.zero;
         }
     }
+
+    
 }
 
