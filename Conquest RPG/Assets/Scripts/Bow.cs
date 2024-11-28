@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class Bow : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class Bow : MonoBehaviour
     private GameObject crossHair;
     private bool isCrossHairActive = false;  // Of de crosshair actief is
     private Animator animator;  // Animator voor de player
+    private bool isShooting = false;  // Of de speler bezig is met schieten
 
     void Start()
     {
@@ -31,15 +33,9 @@ public class Bow : MonoBehaviour
         }
 
         // Schiet een pijl wanneer de linkermuisknop wordt ingedrukt
-        if (Input.GetMouseButtonDown(0) && isCrossHairActive)
+        if (Input.GetMouseButton(0) && isCrossHairActive && !isShooting)
         {
-            animator.SetBool("shooting", true);
-            ShootArrow();
-            animator.SetBool("shooting", true);  // Zet de shooting boolean aan
-        }
-        else
-        {
-            animator.SetBool("shooting", false);  // Zet de shooting boolean uit als niet schiet
+            StartCoroutine(ShootArrowWithAnimation());
         }
 
         // Beweeg de crosshair naar de muispositie als deze actief is
@@ -65,23 +61,52 @@ public class Bow : MonoBehaviour
         Cursor.visible = !isCrossHairActive;
     }
 
-    private void ShootArrow()
+    private IEnumerator ShootArrowWithAnimation()
     {
-        // Verkrijg de muispositie en zet deze om naar wereldcoördinaten
-        Vector3 targetPosition = crossHair.transform.position;
+        // Start de schietanimatie
+        isShooting = true;
+        animator.SetBool("shooting", true);
 
-        // Maak een pijl en positioneer deze bij de boog
-        GameObject arrow = Instantiate(arrowPrefab, transform.position, Quaternion.identity);
+        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
 
-        // Bereken de richting van de pijl naar de crosshair
-        Vector2 direction = (targetPosition - transform.position).normalized;
+        // Stop de schietanimatie
+        animator.SetBool("shooting", false);
+        isShooting = false;
 
-        // Draai de pijl zodat deze naar de crosshair wijst
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        arrow.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+        // Schiet de pijl direct af zonder te wachten op de animatie
+        if (CanShootInDirection())
+        {
+            // Maak een pijl en positioneer deze bij de boog
+            Vector3 targetPosition = crossHair.transform.position;
+            GameObject arrow = Instantiate(arrowPrefab, transform.position, Quaternion.identity);
 
-        // Zet de snelheid van de pijl in de richting van de crosshair
-        arrow.GetComponent<Rigidbody2D>().linearVelocity = direction * arrowSpeed;
+            // Bereken de richting van de pijl naar de crosshair
+            Vector2 direction = (targetPosition - transform.position).normalized;
+
+            // Draai de pijl zodat deze naar de crosshair wijst
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            arrow.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+
+            // Zet de snelheid van de pijl in de richting van de crosshair
+            arrow.GetComponent<Rigidbody2D>().linearVelocity = direction * arrowSpeed;
+        }
+
+    }
+
+
+    private bool CanShootInDirection()
+    {
+        // Controleer of de crosshair binnen de schietrichting ligt
+        Vector3 directionToCrossHair = (crossHair.transform.position - transform.position).normalized;
+
+        // Controleer of de richting van de crosshair overeenkomt met de beweging
+        float moveX = animator.GetFloat("moveX");
+        float moveY = animator.GetFloat("moveY");
+
+        return (moveX > 0 && directionToCrossHair.x > 0) ||   // Rechts
+               (moveX < 0 && directionToCrossHair.x < 0) ||   // Links
+               (moveY > 0 && directionToCrossHair.y > 0) ||   // Omhoog
+               (moveY < 0 && directionToCrossHair.y < 0);     // Omlaag
     }
 
     private void MoveCrossHair()
