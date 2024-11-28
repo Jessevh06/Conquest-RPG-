@@ -193,3 +193,4 @@ MonoBehaviour:
   thrust: 8
   knockTime: 0.5
   damage: 0
+  ignoreObject: {fileID: 0}
