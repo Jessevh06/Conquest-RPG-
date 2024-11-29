@@ -2,10 +2,9 @@ using UnityEngine;
 
 public class Arrow : MonoBehaviour
 {
-    public float despawnDistance = 10f;  // Maximale afstand die de pijl kan afleggen voordat hij verdwijnt
+    public float despawnDistance = 4;  // Maximale afstand die de pijl kan afleggen voordat hij verdwijnt
     private Vector3 startPosition;       // Startpositie van de pijl
-
-    public GameObject crossHair;  // Verwijzing naar de crosshair
+    private GameObject crossHair;  // Verwijzing naar de crosshair
 
     void Start()
     {

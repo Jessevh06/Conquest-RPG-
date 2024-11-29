@@ -11,11 +11,11 @@ GameObject:
   - component: {fileID: 3208551069409500411}
   - component: {fileID: 845116859221712914}
   - component: {fileID: 3481200917919611356}
-  - component: {fileID: -8176754938937449954}
   - component: {fileID: 8449859227140237554}
-  - component: {fileID: -6999606828035487601}
+  - component: {fileID: 5894904460903570671}
+  - component: {fileID: -3007626660659230651}
   m_Layer: 0
-  m_Name: Arrow
+  m_Name: ArrowEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -118,21 +118,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &-8176754938937449954
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3351039545906056351}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b263b3c3237e4494db062b2f8db54401, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  despawnDistance: 4
-  startPosition: {x: 0, y: 0, z: 0}
-  crossHair: {fileID: 0}
 --- !u!61 &8449859227140237554
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -179,7 +164,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.4377249, y: 0.13178217}
   m_EdgeRadius: 0
---- !u!114 &-6999606828035487601
+--- !u!114 &5894904460903570671
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -188,10 +173,31 @@ MonoBehaviour:
   m_GameObject: {fileID: 3351039545906056351}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ccb252b7676da0d429ca9a533a971eef, type: 3}
+  m_Script: {fileID: 11500000, guid: 964d9f194d28b6949955e8ef85957ee2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thrust: 8
-  knockTime: 0.5
-  damage: 0
-  ignoreObject: {fileID: 0}
+  speed: 20
+  impactEffect: {fileID: 0}
+  bulletDamage: 0
+--- !u!95 &-3007626660659230651
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3351039545906056351}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
