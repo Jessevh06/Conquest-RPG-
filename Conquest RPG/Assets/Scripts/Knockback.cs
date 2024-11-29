@@ -7,7 +7,8 @@ public class Knockback : MonoBehaviour
     public float thrust;
     public float knockTime;
     public float damage;
-    public GameObject ignoreObject;
+    
+    public GameObject entity;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     
     private void OnTriggerEnter2D(Collider2D other)
@@ -25,7 +26,7 @@ public class Knockback : MonoBehaviour
                 Rigidbody2D hit = other.GetComponent<Rigidbody2D>();
                 if (hit != null)
                 {
-                    Vector2 difference = hit.transform.position - transform.position;
+                    Vector2 difference = hit.transform.position - entity.transform.position;
                     difference = difference.normalized * thrust;
                     hit.AddForce(difference, ForceMode2D.Impulse);
                     if (other.gameObject.CompareTag("enemy") && other.isTrigger)

@@ -46,7 +46,6 @@ public class Skeleton_Swordman : Enemy
             if (currentState == EnemyState.idle || currentState == EnemyState.walk && currentState != EnemyState.stagger)
             {
 
-
                 Vector3 temp = Vector3.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
 
                 changeAnim(temp - transform.position);
@@ -54,13 +53,20 @@ public class Skeleton_Swordman : Enemy
                 ChangeState(EnemyState.walk);
                 anim.SetBool("moving", true);
                 //anim.SetBool("wakeUp", true);
+                anim.SetBool("attacking", false);
             }
 
         }
+        else if (Vector3.Distance(target.position, transform.position) <= attackRadius)
+        {
+            anim.SetBool("attacking", true);
+        }
+
         else if (Vector3.Distance(target.position, transform.position) > chaseRadius)
         {
             //anim.SetBool("wakeUp", false);
             anim.SetBool("moving", false);
+            anim.SetBool("attacking", false);
         }
     }
     private void SetAnimFloat(Vector2 setVector)
