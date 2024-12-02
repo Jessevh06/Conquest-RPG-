@@ -57,6 +57,7 @@ public class Skeleton_Mage : Enemy
         }
         else if (Vector3.Distance(target.position, transform.position) <= attackRadius)
         {
+            anim.SetBool("moving", false);
             //anim.SetBool("attacking", true);
             if (target == null)
             {
