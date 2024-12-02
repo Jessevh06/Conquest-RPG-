@@ -609,11 +609,11 @@ PolygonCollider2D:
     m_Paths:
     - - {x: 0.53678036, y: 0.34869707}
       - {x: 0.3988471, y: 0.48445112}
-      - {x: 0.198874, y: 0.07565692}
-      - {x: 0.04347506, y: -0.016111344}
-      - {x: -0.1599216, y: -0.036382794}
-      - {x: -0.27109277, y: 0.025010929}
-      - {x: -0.512309, y: 0.11757361}
+      - {x: -0.012415763, y: 0.2603026}
+      - {x: -0.12483201, y: 0.23579317}
+      - {x: -0.28623226, y: 0.22476979}
+      - {x: -0.38557783, y: 0.21996577}
+      - {x: -0.482403, y: 0.20672141}
       - {x: -0.568618, y: 0.17297147}
       - {x: -0.63395864, y: 0.0995737}
       - {x: -0.63011885, y: -0.18310833}
@@ -8100,7 +8100,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: -1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1246565707}
@@ -9096,7 +9096,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccb252b7676da0d429ca9a533a971eef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thrust: 8
+  thrust: 4
   knockTime: 0.1
   damage: 0
   entity: {fileID: 1415593972}
@@ -10681,7 +10681,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1980836245
 MonoBehaviour:
   m_ObjectHideFlags: 0

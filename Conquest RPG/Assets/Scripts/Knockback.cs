@@ -13,8 +13,8 @@ public class Knockback : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (!other.gameObject.CompareTag("Player") && this.gameObject.CompareTag("arrow") || this.gameObject.CompareTag("enemy") && !other.gameObject.CompareTag("enemy") 
-            || this.gameObject.CompareTag("Player") && other.gameObject.CompareTag("enemy"))
+        if (!other.gameObject.CompareTag("Player") && this.gameObject.CompareTag("arrow") || this.gameObject.CompareTag("enemy") && !other.gameObject.CompareTag("enemy")
+            || this.gameObject.CompareTag("Player"))
         {
             
 
@@ -32,7 +32,10 @@ public class Knockback : MonoBehaviour
                     hit.AddForce(difference, ForceMode2D.Impulse);
                     if (other.gameObject.CompareTag("enemy") && other.isTrigger)
                     {
-                        hit.GetComponent<Enemy>().currentState = EnemyState.stagger;
+                        if (hit.GetComponent<Enemy>().currentState != EnemyState.stagger)
+                        {
+                            hit.GetComponent<Enemy>().currentState = EnemyState.stagger;
+                        }
                         other.GetComponent<Enemy>().Knock(hit, knockTime, damage);
                     }
                     if (other.gameObject.CompareTag("Player"))
