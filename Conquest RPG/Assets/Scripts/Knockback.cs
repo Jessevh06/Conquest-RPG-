@@ -13,8 +13,8 @@ public class Knockback : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (!other.gameObject.CompareTag("Player") && this.gameObject.CompareTag("arrow") || this.gameObject.CompareTag("enemy") && !other.gameObject.CompareTag("enemy")
-            || this.gameObject.CompareTag("Player"))
+        if (!other.gameObject.CompareTag("Player") && this.gameObject.CompareTag("arrow") || this.gameObject.CompareTag("enemyProjectile") && !other.gameObject.CompareTag("enemy")
+            || this.gameObject.CompareTag("Player") || this.gameObject.CompareTag("enemy") && !other.gameObject.CompareTag("enemy"))
         {
             
 
@@ -32,11 +32,9 @@ public class Knockback : MonoBehaviour
                     hit.AddForce(difference, ForceMode2D.Impulse);
                     if (other.gameObject.CompareTag("enemy") && other.isTrigger)
                     {
-                        if (hit.GetComponent<Enemy>().currentState != EnemyState.stagger)
-                        {
-                            hit.GetComponent<Enemy>().currentState = EnemyState.stagger;
-                        }
-                        other.GetComponent<Enemy>().Knock(hit, knockTime, damage);
+                        
+                       hit.GetComponent<Enemy>().currentState = EnemyState.stagger;
+                       other.GetComponent<Enemy>().Knock(hit, knockTime, damage);
                     }
                     if (other.gameObject.CompareTag("Player"))
                     {
@@ -49,7 +47,10 @@ public class Knockback : MonoBehaviour
 
                         }
                     }
-
+                    if (other.gameObject.CompareTag("enemyProjectile") && other.isTrigger)
+                    {
+                        this.GetComponent<PlayerMovement>().Knock(knockTime, damage);
+                    }
 
                 }
 
