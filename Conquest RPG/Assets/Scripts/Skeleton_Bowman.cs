@@ -4,12 +4,15 @@ using System.Collections;
 public class Skeleton_Bowman : Enemy
 {
     public Transform target;
+    private Rigidbody2D myRigidbody;
+    public float chaseRadius;
+    public float attackRadius;
 
     [Header("Attributes")]
     public float range = 15f;
     public float fireRate = 1f;
     private float fireCountdown = 1f;
-    public int towerDamage;
+    
 
     [Header("Unity Setup Fields")]
     public string enemyTag = "Enemy";
@@ -22,8 +25,9 @@ public class Skeleton_Bowman : Enemy
 
     private void Start()
     {
+        currentState = EnemyState.idle;
+        myRigidbody = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        InvokeRepeating("UpdateTarget", 0f, 0.5f);
     }
 
     void UpdateTarget()
@@ -47,36 +51,70 @@ public class Skeleton_Bowman : Enemy
 
     void Update()
     {
-        if (target == null)
+        CheckDistance();
+    }
+
+    void CheckDistance()
+    {
+        if (Vector3.Distance(target.position, transform.position) <= chaseRadius && Vector3.Distance(target.position, transform.position) > attackRadius)
         {
-            fireCountdown = Mathf.Max(fireCountdown - Time.deltaTime, 0f);
-            anim.SetBool("attacking", false); // Stop animatie
-            return;
+            if (currentState == EnemyState.idle || currentState == EnemyState.walk && currentState != EnemyState.stagger)
+            {
+
+                Vector3 temp = Vector3.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
+
+
+                changeAnim(temp - transform.position);
+                myRigidbody.MovePosition(temp);
+                ChangeState(EnemyState.walk);
+                anim.SetBool("moving", true);
+                //anim.SetBool("wakeUp", true);
+                anim.SetBool("attacking", false);
+            }
+
+        }
+        else if (Vector3.Distance(target.position, transform.position) <= attackRadius)
+        {
+            anim.SetBool("moving", false);
+            //anim.SetBool("attacking", true);
+            if (target == null)
+            {
+                fireCountdown = Mathf.Max(fireCountdown - Time.deltaTime, 0f);
+                anim.SetBool("attacking", false); // Stop animatie
+                return;
+            }
+
+            direction = (target.position - transform.position).normalized;
+
+            // Update animatie richting
+            anim.SetFloat("moveX", direction.x);
+            anim.SetFloat("moveY", direction.y);
+
+            // Controleer of de bowman naar links of rechts kijkt
+            if (direction.x < 0 && !isFacingLeft)
+            {
+                Flip(true); // Flip naar links
+            }
+            else if (direction.x > 0 && isFacingLeft)
+            {
+                Flip(false); // Flip naar rechts
+            }
+
+            if (fireCountdown <= 0f)
+            {
+                StartCoroutine(AttackCo());
+                fireCountdown = 1f / fireRate;
+            }
+
+            fireCountdown -= Time.deltaTime;
         }
 
-        direction = (target.position - transform.position).normalized;
-
-        // Update animatie richting
-        anim.SetFloat("moveX", direction.x);
-        anim.SetFloat("moveY", direction.y);
-
-        // Controleer of de bowman naar links of rechts kijkt
-        if (direction.x < 0 && !isFacingLeft)
+        else if (Vector3.Distance(target.position, transform.position) > chaseRadius)
         {
-            Flip(true); // Flip naar links
+            //anim.SetBool("wakeUp", false);
+            anim.SetBool("moving", false);
+            anim.SetBool("attacking", false);
         }
-        else if (direction.x > 0 && isFacingLeft)
-        {
-            Flip(false); // Flip naar rechts
-        }
-
-        if (fireCountdown <= 0f)
-        {
-            StartCoroutine(AttackCo());
-            fireCountdown = 1f / fireRate;
-        }
-
-        fireCountdown -= Time.deltaTime;
     }
 
     private IEnumerator AttackCo()
@@ -94,7 +132,6 @@ public class Skeleton_Bowman : Enemy
         if (bullet != null)
         {
             bullet.Chase(target);
-            bullet.SetDamage(towerDamage);
         }
     }
 
@@ -110,5 +147,53 @@ public class Skeleton_Bowman : Enemy
     {
         Gizmos.color = target != null ? Color.green : Color.red;
         Gizmos.DrawWireSphere(transform.position, range);
+    }
+    private void SetAnimFloat(Vector2 setVector)
+    {
+        anim.SetFloat("moveX", setVector.x);
+        anim.SetFloat("moveY", setVector.y);
+
+    }
+    private void changeAnim(Vector2 direction)
+    {
+        if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y))
+        {
+            if (direction.x > 0)
+            {
+                SetAnimFloat(Vector2.right);
+            }
+            else if (direction.x < 0)
+            {
+                SetAnimFloat(Vector2.left);
+            }
+        }
+        else if (Mathf.Abs(direction.x) < Mathf.Abs(direction.y))
+        {
+            if (direction.y > 0)
+            {
+                SetAnimFloat(Vector2.up);
+            }
+            else if (direction.y < 0)
+            {
+                SetAnimFloat(Vector2.down);
+            }
+        }
+        // Spiegel het object als het naar links beweegt
+        if (direction.x < 0)
+        {
+            transform.localScale = new Vector3(-1, 1, 1); // Spiegel op de X-as
+        }
+        else if (direction.x > 0)
+        {
+            transform.localScale = new Vector3(1, 1, 1); // Normaal op de X-as
+        }
+    }
+
+    private void ChangeState(EnemyState newState)
+    {
+        if (currentState != newState)
+        {
+            currentState = newState;
+        }
     }
 }

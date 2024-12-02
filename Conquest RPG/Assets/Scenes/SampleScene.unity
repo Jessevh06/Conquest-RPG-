@@ -634,6 +634,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccb252b7676da0d429ca9a533a971eef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Projectile: {fileID: 0}
   thrust: 6
   knockTime: 0.5
   damage: 0
@@ -5359,7 +5360,7 @@ GameObject:
   - component: {fileID: 463072445}
   - component: {fileID: 463072447}
   - component: {fileID: 463072446}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: hit box right
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -5393,6 +5394,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccb252b7676da0d429ca9a533a971eef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Projectile: {fileID: 0}
   thrust: 6
   knockTime: 0.5
   damage: 1
@@ -5498,6 +5500,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccb252b7676da0d429ca9a533a971eef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Projectile: {fileID: 0}
   thrust: 6
   knockTime: 0.5
   damage: 0
@@ -5959,7 +5962,7 @@ GameObject:
   - component: {fileID: 877325829}
   - component: {fileID: 877325831}
   - component: {fileID: 877325830}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: hit box left
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -5993,6 +5996,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccb252b7676da0d429ca9a533a971eef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Projectile: {fileID: 0}
   thrust: 6
   knockTime: 0.5
   damage: 1
@@ -6064,7 +6068,7 @@ GameObject:
   - component: {fileID: 893893576}
   - component: {fileID: 893893578}
   - component: {fileID: 893893577}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: hit box down
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -6098,6 +6102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccb252b7676da0d429ca9a533a971eef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Projectile: {fileID: 0}
   thrust: 6
   knockTime: 0.5
   damage: 1
@@ -8117,6 +8122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccb252b7676da0d429ca9a533a971eef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Projectile: {fileID: 0}
   thrust: 6
   knockTime: 0.5
   damage: 0
@@ -8194,7 +8200,7 @@ GameObject:
   - component: {fileID: 1112463788}
   - component: {fileID: 1112463787}
   - component: {fileID: 1112463789}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -8357,7 +8363,7 @@ BoxCollider2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_LayerOverridePriority: 0
+  m_LayerOverridePriority: 1
   m_ForceSendLayers:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -8403,7 +8409,7 @@ BoxCollider2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_LayerOverridePriority: 0
+  m_LayerOverridePriority: 1
   m_ForceSendLayers:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -8420,7 +8426,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.013958931, y: 0.032317176}
+  m_Offset: {x: -0.013301194, y: 0.09911303}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -8430,7 +8436,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.15146732, y: 0.3273206}
+  m_Size: {x: 0.2710116, y: 0.46091232}
   m_EdgeRadius: 0
 --- !u!114 &1112463789
 MonoBehaviour:
@@ -8467,7 +8473,7 @@ GameObject:
   - component: {fileID: 1246565712}
   - component: {fileID: 1246565711}
   - component: {fileID: 1246565710}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Skeleton_Swordman
   m_TagString: enemy
   m_Icon: {fileID: 0}
@@ -8517,7 +8523,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2049432569
   m_SortingLayer: 4
-  m_SortingOrder: 3
+  m_SortingOrder: 10
   m_Sprite: {fileID: -2139014974517455860, guid: 0fc2da2c83c75e94baebfa60c6e0ded5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -8572,6 +8578,8 @@ MonoBehaviour:
   attackRadius: 0.5
   homePosition: {fileID: 0}
   anim: {fileID: 0}
+  attackCooldown: 1.5
+  knockbackForce: 2
 --- !u!95 &1246565709
 Animator:
   serializedVersion: 7
@@ -8701,7 +8709,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.043692738, y: 0.06116979}
+  m_Offset: {x: 0.037424088, y: 0.053856432}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -8711,7 +8719,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.43199426, y: 0.6242423}
+  m_Size: {x: 0.40691996, y: 0.60961556}
   m_EdgeRadius: 0
 --- !u!1 &1248285713
 GameObject:
@@ -8724,7 +8732,7 @@ GameObject:
   - component: {fileID: 1248285714}
   - component: {fileID: 1248285716}
   - component: {fileID: 1248285715}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: hit box up
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -8758,6 +8766,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccb252b7676da0d429ca9a533a971eef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Projectile: {fileID: 0}
   thrust: 6
   knockTime: 0.5
   damage: 1
@@ -8870,7 +8879,7 @@ MonoBehaviour:
   deathEffect: {fileID: 0}
   target: {fileID: 1112463785}
   chaseRadius: 6
-  attackRadius: 0
+  attackRadius: 0.5
   homePosition: {fileID: 0}
   anim: {fileID: 0}
 --- !u!95 &1415593974
@@ -9096,6 +9105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccb252b7676da0d429ca9a533a971eef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Projectile: {fileID: 0}
   thrust: 4
   knockTime: 0.1
   damage: 0
@@ -9142,9 +9152,10 @@ MonoBehaviour:
   moveSpeed: 0
   deathEffect: {fileID: 0}
   target: {fileID: 1112463785}
+  chaseRadius: 5
+  attackRadius: 7
   range: 2.5
   fireRate: 1
-  towerDamage: 1
   enemyTag: Player
   bulletPrefab: {fileID: 3351039545906056351, guid: 5103cca26180d1546819856f76e7d856, type: 3}
   firePoint: {fileID: 1802798075}
@@ -10681,7 +10692,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1980836245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10706,7 +10717,7 @@ MonoBehaviour:
   attackRadius: 4
   range: 3
   fireRate: 0.2
-  enemyTag: 
+  enemyTag: Player
   bulletPrefab: {fileID: 8138255141381236077, guid: c3a8b6fe4ec618548b5ec592404e5c76, type: 3}
   firePoint: {fileID: 1980836251}
   anim: {fileID: 0}
@@ -11028,6 +11039,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccb252b7676da0d429ca9a533a971eef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Projectile: {fileID: 0}
   thrust: 6
   knockTime: 0.5
   damage: 0

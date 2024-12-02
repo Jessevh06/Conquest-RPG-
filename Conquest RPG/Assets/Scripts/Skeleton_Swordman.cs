@@ -9,6 +9,11 @@ public class Skeleton_Swordman : Enemy
     public Transform homePosition;
     public Animator anim;
 
+    public float attackCooldown = 1.5f; // Tijd tussen aanvallen
+    private float lastAttackTime = 0f;
+
+    public float knockbackForce = 3f; // Hoe sterk de knockback is
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -21,60 +26,64 @@ public class Skeleton_Swordman : Enemy
     // Update is called once per frame
     void FixedUpdate()
     {
-        //if (currentState != EnemyState.dying)
-        {
-            CheckDistance();
-            
-        }
-        //else if(currentState == EnemyState.dead)
-        //{
-        //    this.gameObject.SetActive(false);
-        //}
-        //else
-        //{
-        //    anim.SetBool("dying", true);
-
-        //    currentState = EnemyState.dead;
-
-        //}
+        CheckDistance();
     }
 
     void CheckDistance()
     {
-        if (Vector3.Distance(target.position, transform.position) <= chaseRadius && Vector3.Distance(target.position, transform.position) > attackRadius)
+        float distanceToTarget = Vector3.Distance(target.position, transform.position);
+
+        if (distanceToTarget <= chaseRadius && distanceToTarget > attackRadius)
         {
             if (currentState == EnemyState.idle || currentState == EnemyState.walk && currentState != EnemyState.stagger)
             {
-
                 Vector3 temp = Vector3.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
 
                 changeAnim(temp - transform.position);
                 myRigidbody.MovePosition(temp);
                 ChangeState(EnemyState.walk);
                 anim.SetBool("moving", true);
-                //anim.SetBool("wakeUp", true);
                 anim.SetBool("attacking", false);
             }
-
         }
-        else if (Vector3.Distance(target.position, transform.position) <= attackRadius)
+        else if (distanceToTarget <= attackRadius)
         {
-            anim.SetBool("attacking", true);
-        }
+            StopMovement(); // Stop de vijand zodra hij binnen aanvalsbereik komt
 
-        else if (Vector3.Distance(target.position, transform.position) > chaseRadius)
+            if (Time.time >= lastAttackTime + attackCooldown)
+            {
+                anim.SetBool("attacking", true);
+                ApplyKnockback();
+                lastAttackTime = Time.time; // Reset de cooldown-timer
+            }
+        }
+        else if (distanceToTarget > chaseRadius)
         {
-            //anim.SetBool("wakeUp", false);
             anim.SetBool("moving", false);
             anim.SetBool("attacking", false);
         }
     }
+
+    private void StopMovement()
+    {
+        // Reset beweging en verander de status naar idle
+        myRigidbody.linearVelocity = Vector2.zero;
+        anim.SetBool("moving", false);
+        ChangeState(EnemyState.idle);
+    }
+
+    private void ApplyKnockback()
+    {
+        Vector2 knockbackDirection = (transform.position - target.position).normalized;
+        myRigidbody.AddForce(knockbackDirection * knockbackForce, ForceMode2D.Impulse);
+    }
+
     private void SetAnimFloat(Vector2 setVector)
     {
         anim.SetFloat("moveX", setVector.x);
         anim.SetFloat("moveY", setVector.y);
-
     }
+
     private void changeAnim(Vector2 direction)
     {
         if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y))
@@ -109,6 +118,7 @@ public class Skeleton_Swordman : Enemy
             transform.localScale = new Vector3(1, 1, 1); // Normaal op de X-as
         }
     }
+
     private void ChangeState(EnemyState newState)
     {
         if (currentState != newState)
@@ -116,7 +126,4 @@ public class Skeleton_Swordman : Enemy
             currentState = newState;
         }
     }
-
-
 }
-

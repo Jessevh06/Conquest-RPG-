@@ -52,7 +52,7 @@ public class Projectile : MonoBehaviour
         
     }
 
-    void HitTarget()
+    public void HitTarget()
     {
         Destroy(gameObject);
     }
