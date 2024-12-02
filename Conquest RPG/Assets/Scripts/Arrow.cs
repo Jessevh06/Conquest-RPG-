@@ -27,7 +27,7 @@ public class Arrow : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         // Controleer of de pijl een object met de tag "Enemy" raakt
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("enemy"))
         {
             Destroy(gameObject);  // Verwijder de pijl bij contact met een vijand
         }

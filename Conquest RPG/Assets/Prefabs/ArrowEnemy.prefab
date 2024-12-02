@@ -179,7 +179,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 20
   impactEffect: {fileID: 0}
-  bulletDamage: 0
+  bulletDamage: 1
 --- !u!95 &-3007626660659230651
 Animator:
   serializedVersion: 7
@@ -214,7 +214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccb252b7676da0d429ca9a533a971eef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thrust: 0
-  knockTime: 0
-  damage: 0
+  thrust: 1
+  knockTime: 0.5
+  damage: 1
   entity: {fileID: 3351039545906056351}
