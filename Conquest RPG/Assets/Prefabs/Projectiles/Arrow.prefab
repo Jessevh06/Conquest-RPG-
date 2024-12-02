@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -6999606828035487601}
   m_Layer: 0
   m_Name: Arrow
-  m_TagString: Untagged
+  m_TagString: arrow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -191,5 +191,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thrust: 8
   knockTime: 0.5
-  damage: 0
+  damage: 1
   entity: {fileID: 3351039545906056351}

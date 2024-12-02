@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class Skeleton_Bowman : MonoBehaviour
+public class Skeleton_Bowman : Enemy
 {
     public Transform target;
 

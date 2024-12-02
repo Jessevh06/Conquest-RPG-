@@ -7,6 +7,7 @@ public class Projectile : MonoBehaviour
     public GameObject impactEffect;
     public int bulletDamage;
     private Vector2 dir;
+    public bool wantToRotate;
 
     public void Chase(Transform _target)
     {
@@ -46,7 +47,9 @@ public class Projectile : MonoBehaviour
         }
 
         transform.Translate(dir.normalized * distanceThisFrame, Space.World);
-        UpdateRotation();
+        
+            UpdateRotation();
+        
     }
 
     void HitTarget()
@@ -56,9 +59,12 @@ public class Projectile : MonoBehaviour
 
     private void UpdateRotation()
     {
-        // Rotatie van de pijl instellen
-        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0, 0, angle);
+        if (wantToRotate)
+        {
+            // Rotatie van de pijl instellen
+            float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(0, 0, angle);
+        }
     }
 }
 
