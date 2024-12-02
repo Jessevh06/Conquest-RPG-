@@ -13,7 +13,8 @@ public class Knockback : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (!other.gameObject.CompareTag("Player") || this.gameObject.CompareTag("enemy"))
+        if (!other.gameObject.CompareTag("Player") && this.gameObject.CompareTag("arrow") || this.gameObject.CompareTag("enemy") && !other.gameObject.CompareTag("enemy") 
+            || this.gameObject.CompareTag("Player") && other.gameObject.CompareTag("enemy"))
         {
             
 
