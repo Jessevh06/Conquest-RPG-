@@ -1006,7 +1006,7 @@ GameObject:
   - component: {fileID: 1112463787}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1478,10 +1478,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08bc59c603f65964b8891a6b7d7fd7c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkRadius: 5
-  moveSpeed: 1
-  Animals: {fileID: 1555065511}
-  idleDuration: 3
+  speed: 0.4
+  range: 0.5
+  maxDistance: 3
+  wayPoint: {x: 0, y: 0}
+  isWalking: 0
 --- !u!114 &1555065511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1494,8 +1495,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4da5d1d714b68ef4b8ed3018bbf97d26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkRadius: 10
-  moveSpeed: 1
+  speed: 0
+  range: 0
+  maxDistance: 0
+  wayPoint: {x: 0, y: 0}
 --- !u!1 &1622096803
 GameObject:
   m_ObjectHideFlags: 0

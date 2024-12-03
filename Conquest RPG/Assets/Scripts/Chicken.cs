@@ -1,71 +1,124 @@
-using System.Collections;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
-using UnityEngine.InputSystem.XR.Haptics;
 
 public class Chicken : Animals
 {
+    private Animator anim;
+    private Vector2 previousPosition;
+    private Vector2 movement;
+    private bool isFacingLeft = false; // Houd bij of de bowman naar links kijkt
+    public Vector2 direction;
 
-    private Animator animator;
-    public Animals Animals;
-    private bool isWalking = false;
-
-    public float idleDuration = 3f;
-    private float idleTimer;
-
+    public bool isPicking = false;
     
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public bool isWalking = true;
+
+    private float stopDuration = 2f;
+    private float walkDuration = 3f;
+    private float timer = 0f;
+    private bool isStopped = false;
+    private bool transitionToPicking = false;
+    private bool transitionToWalking = false;
+
+    private void Start()
     {
-        Animals.AnimalStart();
-        animator = GetComponent<Animator>();
-        SetNewTargetPosition();
-       
+        SetNewDestination();
+        anim = GetComponent<Animator>();
+        previousPosition = transform.position;
+        anim.SetBool("Walking", true);
+        anim.SetBool("Picking", false);
+        anim.SetBool("Idle", false);
+        
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        Animals.AnimalUpdate();
-        if (!isWalking)
-        {
+        anim.SetBool("Idle", false);
+        timer += Time.deltaTime;
 
-            idleTimer += Time.deltaTime;
-            if (idleTimer >= idleDuration)
+        if (transitionToPicking)
+        {
+            if (timer >= 0.5f)
             {
-                StartWalking();
+                transitionToPicking = false;
+                isStopped = true;
+                timer = 0f;
+                anim.SetBool("Picking", true);
+                anim.SetBool("Idle", false);
+            }
+        }
+        else if (transitionToWalking)
+        {
+            if (timer >= 0.5f)
+            {
+                transitionToWalking = false;
+                isStopped = false;
+                anim.SetBool("Walking", true);
+                anim.SetBool("Idle", false);
+                SetNewDestination();
+            }
+        }
+        else if (isStopped)
+        {
+            if (timer >= stopDuration)
+            {
+                anim.SetBool("Picking", false);
+                anim.SetBool("Idle", false);
+                transitionToWalking = true;
+                timer = 0f;
             }
         }
         else
         {
-            MoveToTarget();
+            transform.position = Vector2.MoveTowards(transform.position, wayPoint, speed * Time.deltaTime);
 
-            float distanceToTarget = Vector3.Distance(transform.position, targetPosition);
-            if (distanceToTarget < 0.2f)
+            if (Vector2.Distance(transform.position, wayPoint) < range || timer >= walkDuration)
             {
-                Debug.Log("Reached target position");
-                StopWalking();
+                anim.SetBool("Idle", false);
+                anim.SetBool("Walking", false);
+                transitionToPicking = true;
+                timer = 0f;
             }
         }
-            
+        UpdateAnimation();
 
-        animator.SetBool("Walking", isWalking);
+
+
+
+
+
+
+
+
     }
-
-    private void StartWalking()
+    public void UpdateAnimation()
     {
-        isWalking = true;
-        idleTimer = 0f;
-        SetNewTargetPosition();
+        Vector2 currentPosition = transform.position;
+        Vector2 movementDirection = currentPosition - previousPosition;
 
+        if (!isStopped && movementDirection.magnitude > 0.0000001f)
+        {
+            HandleDirection(movementDirection);
+        }
+
+
+        previousPosition = currentPosition;
+
+        
         
     }
 
-    private void StopWalking()
+    private void HandleDirection(Vector2 direction)
     {
-        isWalking = false;
-        idleTimer = 0f;
-        SetNewTargetPosition();
+        if (direction.x < 0)
+        {
+            transform.localScale = new Vector3(1, 1, 1);
+        }
+        else if (direction.x > 0)
+        {
+            transform.localScale = new Vector3(-1, 1, 1);
+        }
     }
 
-    
+
 }
