@@ -8479,7 +8479,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1246565706
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8857,7 +8857,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1415593973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9131,7 +9131,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1802798072
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9149,11 +9149,11 @@ MonoBehaviour:
   health: 0
   enemyName: 
   baseAttack: 0
-  moveSpeed: 0
+  moveSpeed: 1
   deathEffect: {fileID: 0}
   target: {fileID: 1112463785}
   chaseRadius: 5
-  attackRadius: 7
+  attackRadius: 5
   range: 2.5
   fireRate: 1
   enemyTag: Player
