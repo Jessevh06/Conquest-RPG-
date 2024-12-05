@@ -57,7 +57,7 @@ public class the_blob : Enemy
         }
         else if(Vector3.Distance(target.position, transform.position) > chaseRadius)
         {
-            anim.SetBool("wakeUp", false);
+           //anim.SetBool("wakeUp", false);
         }
     }
     //private void SetAnimFloat(Vector2 setVector)
