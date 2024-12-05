@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6198894630844924819}
   m_Layer: 0
   m_Name: House_Abandoned_4_1 1_0
-  m_TagString: Untagged
+  m_TagString: envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 505227286, guid: 1e6e15b828622134fb017918e5089d0e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

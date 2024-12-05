@@ -125,7 +125,7 @@ public class PlayerMovement : MonoBehaviour
     }//
     private IEnumerator KnockCo(float knockTime)
     {
-        Debug.Log("knockback snapje");
+       
         if (myRigidbody != null)
         {
             yield return new WaitForSeconds(knockTime);

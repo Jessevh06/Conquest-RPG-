@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 305549057066521385}
   m_Layer: 0
   m_Name: House_Abandoned_2_4 1_0
-  m_TagString: Untagged
+  m_TagString: envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
