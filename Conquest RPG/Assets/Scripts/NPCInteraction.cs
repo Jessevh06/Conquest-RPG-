@@ -11,6 +11,7 @@ public class NPCInteraction : MonoBehaviour
     private NPCmovement npcMovement; // Referentie naar het NPCmovement-script
     public Animator anim; // Animator van de NPC
     private bool isDetailVisible = false; // Controleert of de detailtekst zichtbaar is
+    public QuestGiver QuestGiver;
 
     private void Start()
     {
@@ -56,6 +57,7 @@ public class NPCInteraction : MonoBehaviour
         {
             // Ga terug naar interactieprompt
             interactionPromptCanvas.SetActive(true);
+            QuestGiver.EnableQuestUI();
             interactionDetailCanvas.SetActive(false);
             isDetailVisible = false;
 
@@ -75,7 +77,7 @@ public class NPCInteraction : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    public void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
