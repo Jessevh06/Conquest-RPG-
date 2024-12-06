@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Healed City.unity
     guid: eadfa8fcbdc2ef94799212dff109fa6d
+  - enabled: 1
+    path: Assets/Scenes/Inside Player House.unity
+    guid: 3948538688ca4a9408d7eb041100b31c
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
