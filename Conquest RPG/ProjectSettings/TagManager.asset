@@ -10,6 +10,7 @@ TagManager:
   - arrow
   - enemyProjectile
   - envoirment
+  - NPC
   layers:
   - Default
   - TransparentFX

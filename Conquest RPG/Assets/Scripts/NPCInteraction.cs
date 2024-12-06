@@ -4,13 +4,16 @@ using TMPro;
 public class NPCInteraction : MonoBehaviour
 {
     public string interactionPrompt = ""; // Tekst die aangeeft dat je kunt interacten
-    public string interactionDetailText = ""; // De tekst die wordt weergegeven bij interactie
-    public GameObject interactionPromptCanvas; // Canvas voor de prompt (Press E to interact)
+    public string interactionTextFirst = ""; // De tekst die wordt weergegeven bij interactie
+    public string interactionTextSecond = ""; // De tekst die wordt weergegeven na spatie
+    public GameObject interactionPromptCanvas; // Canvas voor de prompt ("Press E to interact")
     public GameObject interactionDetailCanvas; // Canvas voor de detailtekst
     private bool isPlayerInRange = false; // Controleert of de speler in de triggerzone is
     private NPCmovement npcMovement; // Referentie naar het NPCmovement-script
     public Animator anim; // Animator van de NPC
     private bool isDetailVisible = false; // Controleert of de detailtekst zichtbaar is
+    private bool isSecondTextVisible = false; // Houdt bij of de tweede tekst wordt getoond
+    public QuestGiver QuestGiver;
 
     private void Start()
     {
@@ -44,6 +47,13 @@ public class NPCInteraction : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 ToggleDetailText();
+                QuestGiver.EnableQuestUI();
+            }
+
+            // Als detailtekst zichtbaar is, luister naar spatie
+            if (isDetailVisible && Input.GetKeyDown(KeyCode.Space))
+            {
+                ShowNextText();
             }
         }
     }
@@ -58,24 +68,42 @@ public class NPCInteraction : MonoBehaviour
             interactionPromptCanvas.SetActive(true);
             interactionDetailCanvas.SetActive(false);
             isDetailVisible = false;
+            isSecondTextVisible = false;
 
-            // Indien nodig, beëindig NPC interactie
+            // Stop NPC interactie indien nodig
             npcMovement?.StopInteraction();
         }
         else
         {
-            // Toon de detailtekst
+            // Toon de eerste detailtekst
             interactionPromptCanvas.SetActive(false);
             interactionDetailCanvas.SetActive(true);
-            interactionDetailCanvas.GetComponentInChildren<TextMeshProUGUI>().text = interactionDetailText;
+            interactionDetailCanvas.GetComponentInChildren<TextMeshProUGUI>().text = interactionTextFirst;
+
             isDetailVisible = true;
+            isSecondTextVisible = false;
 
             // Start NPC interactie
             npcMovement?.StartInteraction();
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void ShowNextText()
+    {
+        if (!isSecondTextVisible)
+        {
+            // Toon de tweede tekst
+            interactionDetailCanvas.GetComponentInChildren<TextMeshProUGUI>().text = interactionTextSecond;
+            isSecondTextVisible = true;
+        }
+        else
+        {
+            // Sluit de interactie als spatie opnieuw wordt gedrukt
+            ToggleDetailText();
+        }
+    }
+
+    public void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
@@ -94,6 +122,7 @@ public class NPCInteraction : MonoBehaviour
             interactionPromptCanvas?.SetActive(false); // Verberg prompt
             interactionDetailCanvas?.SetActive(false); // Verberg detailtekst
             isDetailVisible = false; // Reset de detailtekst
+            isSecondTextVisible = false; // Reset de tweede tekst
             anim?.SetBool("moving", true); // Start NPC animatie
             npcMovement?.StopInteraction(); // Start NPC beweging
         }
