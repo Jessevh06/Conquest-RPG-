@@ -28,7 +28,7 @@ public class NPCmovement : MonoBehaviour
         {
             Debug.LogError("No waypoints found! Ensure NPCPath is set up correctly.");
         }
-    }
+    }//
 
     private void Update()
     {
