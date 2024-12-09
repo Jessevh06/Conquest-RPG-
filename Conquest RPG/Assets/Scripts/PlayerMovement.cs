@@ -21,6 +21,11 @@ public class PlayerMovement : MonoBehaviour
     public FloatValue currentHealth;
     public Signal playerHealthSignal;
 
+    private bool canAttack = false;
+    
+
+    
+
     void Start()
     {
         currentState = PlayerState.walk;
@@ -38,13 +43,37 @@ public class PlayerMovement : MonoBehaviour
         change.y = Input.GetAxisRaw("Vertical");
         if (Input.GetButtonDown("attack") && currentState != PlayerState.attack && currentState != PlayerState.stagger)
         {
-            StartCoroutine(AttackCo());
+            if (canAttack)
+            {
+                StartCoroutine(AttackCo());
+            }
+            
         }
 
         else if (currentState == PlayerState.walk || currentState == PlayerState.idle)
         {
             UpdateAnimationAndMove();
         }
+
+     
+
+
+
+
+        
+
+        //if (canAttackWithSword && Input.GetKeyDown(KeyCode.Space) && currentState != PlayerState.attack && currentState != PlayerState.stagger)
+        //{
+        //    StartCoroutine(SwordAttackCo());
+        //}
+        //else if (Input.GetButtonDown("attack") && currentState != PlayerState.attack && currentState != PlayerState.stagger)
+        //{
+        //    StartCoroutine(AttackCo());
+        //}
+        //else if (currentState == PlayerState.walk || currentState == PlayerState.idle)
+        //{
+        //    UpdateAnimationAndMove();
+        //}
     }
     private IEnumerator AttackCo()
     {
@@ -69,6 +98,16 @@ public class PlayerMovement : MonoBehaviour
     //    {
     //        animator.SetBool("moving", false);
     //    }
+    //}
+
+    //private IEnumerator SwordAttackCo()
+    //{
+    //    animator.SetBool("attacking", true);
+    //    currentState = PlayerState.attack;
+    //    Debug.Log("Zwaardaanval uitgevoerd!");
+    //    yield return new WaitForSeconds(0.5f);
+    //    animator.SetBool("attacking", false);
+    //    currentState = PlayerState.walk;
     //}
 
 
@@ -134,6 +173,22 @@ public class PlayerMovement : MonoBehaviour
             myRigidbody.linearVelocity = Vector2.zero;
         }
     }
+
+    public void SetCanAttack(bool value)
+    {
+        canAttack = value;
+    }
+
+    void Attack()
+    {
+        currentState = PlayerState.stagger;
+    }
+
+    //public void EnableSwordAttack()
+    //{
+    //    canAttackWithSword = true;
+    //    Debug.Log("Speler kan nu met het zwaard aanvallen!");
+    //}
 
     
 }

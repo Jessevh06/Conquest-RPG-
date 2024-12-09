@@ -6,7 +6,6 @@ public class Chicken : Animals
     private Animator anim;
     private Vector2 previousPosition;
     private Vector2 movement;
-    private bool isFacingLeft = false; // Houd bij of de bowman naar links kijkt
     public Vector2 direction;
 
     public bool isPicking = false;
