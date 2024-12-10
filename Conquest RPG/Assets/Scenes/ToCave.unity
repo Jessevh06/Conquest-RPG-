@@ -75990,7 +75990,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!222 &1853706164
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -81567,29 +81567,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2178200848896582303, guid: 90c3290d9a23e604c934f72d3b0843d9, type: 3}
-      propertyPath: m_text
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2178200848896582303, guid: 90c3290d9a23e604c934f72d3b0843d9, type: 3}
-      propertyPath: m_fontStyle
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2178200848896582303, guid: 90c3290d9a23e604c934f72d3b0843d9, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
     - target: {fileID: 5664537703696838216, guid: 90c3290d9a23e604c934f72d3b0843d9, type: 3}
       propertyPath: m_Name
       value: RightSign
-      objectReference: {fileID: 0}
-    - target: {fileID: 5664537703696838216, guid: 90c3290d9a23e604c934f72d3b0843d9, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7604371591816261783, guid: 90c3290d9a23e604c934f72d3b0843d9, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -81640,7 +81620,7 @@ PrefabInstance:
     - target: {fileID: 1836905165241661328, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
       propertyPath: interactionDetailCanvas
       value: 
-      objectReference: {fileID: 1853706163}
+      objectReference: {fileID: 1910143946}
     - target: {fileID: 1836905165241661328, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
       propertyPath: interactionPromptCanvas
       value: 
@@ -81829,3 +81809,4 @@ SceneRoots:
   - {fileID: 901247084}
   - {fileID: 478392750}
   - {fileID: 1937089549}
+  - {fileID: 519420032}

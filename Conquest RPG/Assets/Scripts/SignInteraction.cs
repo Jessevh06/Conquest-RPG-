@@ -6,31 +6,35 @@ public class SignInteraction : MonoBehaviour
 {
     public string defaultText = "Welcome to the sign!"; // De standaard tekst
     public string interactionText = "You pressed E! Here's more info."; // De tekst na interactie
-    public GameObject textUI; // Referentie naar de tekst (TMP component)
-    public Image backgroundImage; // Referentie naar de Image van de Canvas
+
+    // Canvas 1: Trigger-zone
+    public GameObject canvasTriggerZone; // Canvas voor tekst als de speler in de triggerzone komt
+    public TMP_Text triggerZoneText; // TMP-component voor de triggerzone
+
+    // Canvas 2: Interactie
+    public GameObject canvasInteraction; // Canvas voor tekst en afbeelding bij interactie
+    public TMP_Text interactionTextUI; // TMP-component voor interactie
+    public Image interactionImage; // Afbeelding die zichtbaar wordt bij interactie
+
     private bool isPlayerInRange = false; // Controleert of de speler in de triggerzone is
     private bool hasInteracted = false; // Controleert of er al is geïnteracteerd
 
     private void Start()
     {
-        // Verberg tekst en achtergrond bij het begin
-        if (textUI != null)
-        {
-            textUI.SetActive(false);
-        }
+        // Verberg beide canvassen bij het begin
+        if (canvasTriggerZone != null)
+            canvasTriggerZone.SetActive(false);
 
-        if (backgroundImage != null)
-        {
-            backgroundImage.enabled = false; // Zorg dat de Image niet zichtbaar is
-        }
+        if (canvasInteraction != null)
+            canvasInteraction.SetActive(false);
     }
 
     private void Update()
     {
-        // Toon standaardtekst en achtergrond als de speler in de triggerzone is
-        if (isPlayerInRange && !hasInteracted)
+        // Toon standaardtekst in trigger-zone canvas als de speler in de triggerzone is
+        if (isPlayerInRange && !hasInteracted && canvasTriggerZone != null)
         {
-            ShowUI(defaultText);
+            ShowTriggerZoneUI();
         }
 
         // Controleer op interactie met de speler
@@ -42,10 +46,15 @@ public class SignInteraction : MonoBehaviour
 
     private void Interact()
     {
-        // Wijzig tekst bij interactie
-        if (textUI != null)
+        // Verberg de triggerzone-UI en toon de interactie-UI
+        if (canvasTriggerZone != null)
+            canvasTriggerZone.SetActive(false);
+
+        if (canvasInteraction != null)
         {
-            textUI.GetComponent<TextMeshProUGUI>().text = interactionText;
+            canvasInteraction.SetActive(true);
+            interactionTextUI.text = interactionText;
+            interactionImage.enabled = true; // Zorg dat de afbeelding zichtbaar is
         }
 
         hasInteracted = true; // Markeer interactie als voltooid
@@ -69,38 +78,24 @@ public class SignInteraction : MonoBehaviour
         {
             isPlayerInRange = false;
 
-            // Verberg tekst en achtergrond
-            HideUI();
+            // Verberg beide canvassen
+            if (canvasTriggerZone != null)
+                canvasTriggerZone.SetActive(false);
+
+            if (canvasInteraction != null)
+                canvasInteraction.SetActive(false);
 
             hasInteracted = false; // Reset interactie bij verlaten van de triggerzone
             Debug.Log("Speler heeft de triggerzone van het bord verlaten.");
         }
     }
 
-    private void ShowUI(string text)
+    private void ShowTriggerZoneUI()
     {
-        if (textUI != null)
+        if (canvasTriggerZone != null)
         {
-            textUI.SetActive(true);
-            textUI.GetComponent<TextMeshProUGUI>().text = text;
-        }
-
-        if (backgroundImage != null)
-        {
-            backgroundImage.enabled = true; // Toon de achtergrond
-        }
-    }
-
-    private void HideUI()
-    {
-        if (textUI != null)
-        {
-            textUI.SetActive(false);
-        }
-
-        if (backgroundImage != null)
-        {
-            backgroundImage.enabled = false; // Verberg de achtergrond
+            canvasTriggerZone.SetActive(true);
+            triggerZoneText.text = defaultText;
         }
     }
 }
