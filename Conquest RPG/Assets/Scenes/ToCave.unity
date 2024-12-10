@@ -53527,6 +53527,7 @@ MonoBehaviour:
   currentHealth: {fileID: 11400000, guid: 6a58dc0fdd944514da85fc17a3e83397, type: 2}
   playerHealthSignal: {fileID: 11400000, guid: bb2ea44b29fbc134b8669e549ba584d9, type: 2}
   startingPosition: {fileID: 11400000, guid: 65041ee2b8e080b40810224e0b6481f5, type: 2}
+  SwordPickedUp: {fileID: 11400000, guid: 1f085a990da31f34fbb01ea539f57b6d, type: 2}
 --- !u!212 &1112463784
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -53730,6 +53731,7 @@ MonoBehaviour:
   arrowPrefab: {fileID: 3351039545906056351, guid: 026e98ca5650b6e48ac807d658985162, type: 3}
   arrowSpeed: 12
   maxRange: 4
+  BowPickedUp: {fileID: 11400000, guid: 7e84f064f9abe4348835a23f0d42325c, type: 2}
 --- !u!1001 &1115048247
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54773,11 +54775,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2854037380439418978, guid: 91445663ea34b084e9918c1ea983a75a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.4214263
+      value: -6.321
       objectReference: {fileID: 0}
     - target: {fileID: 2854037380439418978, guid: 91445663ea34b084e9918c1ea983a75a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.538362
+      value: -0.528
       objectReference: {fileID: 0}
     - target: {fileID: 2854037380439418978, guid: 91445663ea34b084e9918c1ea983a75a, type: 3}
       propertyPath: m_LocalPosition.z

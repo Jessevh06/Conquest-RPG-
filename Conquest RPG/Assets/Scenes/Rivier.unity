@@ -21515,7 +21515,7 @@ GameObject:
   - component: {fileID: 463072445}
   - component: {fileID: 463072447}
   - component: {fileID: 463072446}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: hit box right
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -22915,7 +22915,7 @@ GameObject:
   - component: {fileID: 877325829}
   - component: {fileID: 877325831}
   - component: {fileID: 877325830}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: hit box left
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -23245,7 +23245,7 @@ GameObject:
   - component: {fileID: 893893576}
   - component: {fileID: 893893578}
   - component: {fileID: 893893577}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: hit box down
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -26852,13 +26852,13 @@ GameObject:
   - component: {fileID: 1112463788}
   - component: {fileID: 1112463787}
   - component: {fileID: 1112463789}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!50 &1112463782
 Rigidbody2D:
   serializedVersion: 5
@@ -26902,6 +26902,8 @@ MonoBehaviour:
   speed: 5
   currentHealth: {fileID: 11400000, guid: 6a58dc0fdd944514da85fc17a3e83397, type: 2}
   playerHealthSignal: {fileID: 11400000, guid: bb2ea44b29fbc134b8669e549ba584d9, type: 2}
+  startingPosition: {fileID: 11400000, guid: 65041ee2b8e080b40810224e0b6481f5, type: 2}
+  SwordPickedUp: {fileID: 11400000, guid: 1f085a990da31f34fbb01ea539f57b6d, type: 2}
 --- !u!212 &1112463784
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -26943,8 +26945,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 499710525
-  m_SortingLayer: 3
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 6
   m_Sprite: {fileID: -2311659948842064771, guid: e36687fb1cb3b2e459cf3fe9675bff5f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -27687,7 +27689,7 @@ GameObject:
   - component: {fileID: 1248285714}
   - component: {fileID: 1248285716}
   - component: {fileID: 1248285715}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: hit box up
   m_TagString: Player
   m_Icon: {fileID: 0}
