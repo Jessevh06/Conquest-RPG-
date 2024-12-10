@@ -26,6 +26,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ToCave.unity
     guid: 2e2b9395aa4c81e4c881147820d88724
+  - enabled: 1
+    path: Assets/Scenes/Cave.unity
+    guid: 64c86a21a8bd37948b4a7d0371e31f91
+  - enabled: 1
+    path: Assets/Scenes/Rivier.unity
+    guid: 7c817e3798dfecd4c981cfde76e5f675
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
