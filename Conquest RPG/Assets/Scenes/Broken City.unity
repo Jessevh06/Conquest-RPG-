@@ -240,7 +240,7 @@ Transform:
   m_GameObject: {fileID: 29361732}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.1099999, y: -15.48, z: -10}
+  m_LocalPosition: {x: -7.5, y: -3.25, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -27632,7 +27632,8 @@ MonoBehaviour:
   speed: 5
   currentHealth: {fileID: 11400000, guid: 6a58dc0fdd944514da85fc17a3e83397, type: 2}
   playerHealthSignal: {fileID: 11400000, guid: bb2ea44b29fbc134b8669e549ba584d9, type: 2}
-  startingPosition: {fileID: 0}
+  startingPosition: {fileID: 11400000, guid: 65041ee2b8e080b40810224e0b6481f5, type: 2}
+  SwordPickedUp: {fileID: 11400000, guid: 1f085a990da31f34fbb01ea539f57b6d, type: 2}
 --- !u!212 &1112463784
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -36654,7 +36655,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2118741600}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -7.44, y: -3.46, z: -0.050766293}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -37280,5 +37281,5 @@ SceneRoots:
   - {fileID: 2687385004221562672}
   - {fileID: 1006019934}
   - {fileID: 845364090}
-  - {fileID: 2118741603}
   - {fileID: 90297301}
+  - {fileID: 2118741603}

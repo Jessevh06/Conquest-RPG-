@@ -21,8 +21,10 @@ public class PlayerMovement : MonoBehaviour
     public FloatValue currentHealth;
     public Signal playerHealthSignal;
     public VectorValue startingPosition;
+    public BoolValue SwordPickedUp;
+    
 
-    private bool canAttack = false;
+    //private bool canAttack = false;
     
 
     
@@ -46,8 +48,9 @@ public class PlayerMovement : MonoBehaviour
         change.y = Input.GetAxisRaw("Vertical");
         if (Input.GetButtonDown("attack") && currentState != PlayerState.attack && currentState != PlayerState.stagger)
         {
-            if (canAttack)
+            if (SwordPickedUp.RuntimeValue)
             {
+               
                 StartCoroutine(AttackCo());
             }
             
@@ -177,10 +180,10 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    public void SetCanAttack(bool value)
-    {
-        canAttack = value;
-    }
+    //public void SetCanAttack(bool value)
+    //{
+    //    canAttack = value;
+    //}
 
     void Attack()
     {

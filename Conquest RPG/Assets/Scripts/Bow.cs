@@ -10,6 +10,7 @@ public class Bow : MonoBehaviour
     private bool isCrossHairActive = false;  // Of de crosshair actief is
     private Animator animator;  // Animator voor de player
     private bool isShooting = false;  // Of de speler bezig is met schieten
+    public BoolValue BowPickedUp;
 
     void Start()
     {
@@ -26,23 +27,28 @@ public class Bow : MonoBehaviour
 
     void Update()
     {
-        // Toggle de crosshair en cursor als op de B-toets wordt gedrukt
-        if (Input.GetKeyDown(KeyCode.B))
+        if (BowPickedUp.RuntimeValue)
         {
-            ToggleCrossHair();
-        }
 
-        // Schiet een pijl wanneer de linkermuisknop wordt ingedrukt
-        if (Input.GetMouseButton(0) && isCrossHairActive && !isShooting)
-        {
-            StartCoroutine(ShootArrowWithAnimation());
-        }
 
-        // Beweeg de crosshair naar de muispositie als deze actief is
-        if (isCrossHairActive)
-        {
-            MoveCrossHair();
-            UpdateShootingDirection();  // Update de richting op basis van de crosshair
+            // Toggle de crosshair en cursor als op de B-toets wordt gedrukt
+            if (Input.GetKeyDown(KeyCode.B))
+            {
+                ToggleCrossHair();
+            }
+
+            // Schiet een pijl wanneer de linkermuisknop wordt ingedrukt
+            if (Input.GetMouseButton(0) && isCrossHairActive && !isShooting)
+            {
+                StartCoroutine(ShootArrowWithAnimation());
+            }
+
+            // Beweeg de crosshair naar de muispositie als deze actief is
+            if (isCrossHairActive)
+            {
+                MoveCrossHair();
+                UpdateShootingDirection();  // Update de richting op basis van de crosshair
+            }
         }
     }
 

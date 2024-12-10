@@ -13,9 +13,12 @@ public class chest : MonoBehaviour
     public TMP_Text PickUpMessage;
     public float messageDuration = 3f;
     public GameObject interactText;
-
+    public BoolValue SwordPickedUp;
+    public BoolValue BowPickedUp;
     private bool isPlayerNearby = false;
     private bool isChestOpen = false;
+    public bool Bow;
+    public bool Sword;
     
 
     private PlayerMovement playerMovement;
@@ -92,7 +95,15 @@ public class chest : MonoBehaviour
 
             if (playerMovement != null)
             {
-                playerMovement.SetCanAttack(true);
+                if (Sword)
+                {
+                    SwordPickedUp.RuntimeValue = true;
+                }
+                if (Bow)
+                {
+                    BowPickedUp.RuntimeValue = true;
+                }
+                //playerMovement.SetCanAttack(true);
                 playerMovement.currentState = PlayerState.walk;
             }
             if (PickUpMessage != null)
