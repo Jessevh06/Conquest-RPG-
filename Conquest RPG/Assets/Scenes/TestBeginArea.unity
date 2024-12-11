@@ -5922,6 +5922,10 @@ MonoBehaviour:
   PickUpMessage: {fileID: 0}
   messageDuration: 3
   interactText: {fileID: 875790670}
+  SwordPickedUp: {fileID: 0}
+  BowPickedUp: {fileID: 0}
+  Bow: 0
+  Sword: 0
 --- !u!95 &566166647
 Animator:
   serializedVersion: 7
@@ -13427,6 +13431,8 @@ MonoBehaviour:
   speed: 5
   currentHealth: {fileID: 11400000, guid: 6a58dc0fdd944514da85fc17a3e83397, type: 2}
   playerHealthSignal: {fileID: 11400000, guid: bb2ea44b29fbc134b8669e549ba584d9, type: 2}
+  startingPosition: {fileID: 0}
+  SwordPickedUp: {fileID: 0}
 --- !u!212 &1112463784
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13630,6 +13636,7 @@ MonoBehaviour:
   arrowPrefab: {fileID: 3351039545906056351, guid: 026e98ca5650b6e48ac807d658985162, type: 3}
   arrowSpeed: 12
   maxRange: 4
+  BowPickedUp: {fileID: 0}
 --- !u!1 &1115422710 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5670632014260055643, guid: 29522f2f013e2214b990ba4861c36d4e, type: 3}
@@ -13793,7 +13800,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1246565706
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14541,7 +14548,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1802798072
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16102,7 +16109,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1980836245
 MonoBehaviour:
   m_ObjectHideFlags: 0

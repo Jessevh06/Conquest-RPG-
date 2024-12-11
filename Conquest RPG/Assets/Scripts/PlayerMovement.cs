@@ -22,9 +22,8 @@ public class PlayerMovement : MonoBehaviour
     public Signal playerHealthSignal;
     public VectorValue startingPosition;
     public BoolValue SwordPickedUp;
-    
 
-    //private bool canAttack = false;
+
     
 
     
@@ -37,12 +36,13 @@ public class PlayerMovement : MonoBehaviour
         animator.SetFloat("moveX", 0);
         animator.SetFloat("moveY", -1);
         transform.position = startingPosition.initialValue;
-       
+
+        
     }
 
     void Update()
     {
-        playerHealthSignal.Raise();
+        //playerHealthSignal.Raise();
         change = Vector3.zero;
         change.x = Input.GetAxisRaw("Horizontal");
         change.y = Input.GetAxisRaw("Vertical");
@@ -155,18 +155,20 @@ public class PlayerMovement : MonoBehaviour
     }
     public void Knock(float knockTime, float damage)
     {
+
+
         currentHealth.RuntimeValue -= damage;
         playerHealthSignal.Raise();
         if (currentHealth.RuntimeValue > 0)
         {
-            
+
             StartCoroutine(KnockCo(knockTime));
         }
         else
         {
             this.gameObject.SetActive(false);
         }
-        
+
     }//
     private IEnumerator KnockCo(float knockTime)
     {
@@ -183,6 +185,21 @@ public class PlayerMovement : MonoBehaviour
     //public void SetCanAttack(bool value)
     //{
     //    canAttack = value;
+    //}
+
+    //public void TakeDamage(float damage)
+    //{
+    //    currentHealth -= damage;
+    //    currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+    //    playerHealthSignal.Raise();
+    //}
+
+    //public void Heal(float amount)
+    //{
+    //    currentHealth += amount;
+    //    currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+    //    playerHealthSignal.Raise();
+    //    Debug.Log($"Player healed by {amount}. Current health: {currentHealth}");
     //}
 
     void Attack()

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f3d581290a96f24bbae1cf90a65d80b, type: 3}
   m_Name: SwordPickedUp
   m_EditorClassIdentifier: 
-  initialValue: 0
-  RuntimeValue: 0
+  initialValue: 1
+  RuntimeValue: 1

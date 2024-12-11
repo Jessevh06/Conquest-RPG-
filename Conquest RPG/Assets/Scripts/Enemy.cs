@@ -23,6 +23,11 @@ public class Enemy : MonoBehaviour
     private Animator animator;
     public GameObject deathEffect;
 
+    [Header("Item Drops")]
+    public GameObject heartPrefab;
+    [Range(0f, 1f)]
+    public float dropChance = 0.25f;
+
     private void Awake()
     {
         health = maxHealth.initialValue;
@@ -36,6 +41,7 @@ public class Enemy : MonoBehaviour
             //currentState = EnemyState.dying;
             //animator.SetBool("dying", true);
             DeathEffect();
+            TryDropItem();
             this.gameObject.SetActive(false);
         }
         
@@ -46,6 +52,18 @@ public class Enemy : MonoBehaviour
         {
             GameObject effect = Instantiate(deathEffect, transform.position, Quaternion.identity);
             Destroy(effect, 1f);
+        }
+    }
+
+    private void TryDropItem()
+    {
+        if (heartPrefab != null)
+        {
+            float randomValue = Random.value;
+            if (randomValue <= dropChance)
+            {
+                Instantiate(heartPrefab, transform.position, Quaternion.identity);
+            }
         }
     }
     public void Knock(Rigidbody2D myRigidbody, float knockTime, float damage)
