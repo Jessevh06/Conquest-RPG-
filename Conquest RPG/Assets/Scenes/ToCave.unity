@@ -81608,7 +81608,7 @@ PrefabInstance:
       objectReference: {fileID: 1640035361}
     - target: {fileID: 1836905165241661328, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
       propertyPath: interactionTextFirst
-      value: Hi Jesse\nHow is your day going?
+      value: "Oh, you startled me! I\u2019m glad to see someone strong like you around."
       objectReference: {fileID: 0}
     - target: {fileID: 1836905165241661328, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
       propertyPath: interactionDetailText
@@ -81616,8 +81616,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1836905165241661328, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
       propertyPath: interactionTextSecond
-      value: 'I lost my precious sword, that comes in handy in this kind of world.\nWil
-        you be so kindly to retrieve it for me? '
+      value: "I lost my bow deep in the cave by the farm. It\u2019s too dangerous
+        for me to go looking myself. Could you help me? "
       objectReference: {fileID: 0}
     - target: {fileID: 1836905165241661328, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
       propertyPath: interactionDetailCanvas
@@ -81811,4 +81811,3 @@ SceneRoots:
   - {fileID: 901247084}
   - {fileID: 478392750}
   - {fileID: 1937089549}
-  - {fileID: 519420032}
