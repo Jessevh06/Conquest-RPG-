@@ -4,6 +4,7 @@ using UnityEngine;
 public class QuestManager : MonoBehaviour
 {
     public List<Quest> quests;
+    public BoolValue swordPickedUp;
 
     // Voeg quest toe aan de lijst
     public void AddQuest(Quest quest)
@@ -19,5 +20,13 @@ public class QuestManager : MonoBehaviour
     public void CompleteQuest(Quest quest)
     {
         quest.isCompleted = true;
+    }
+
+    public void Update()
+    {
+        if (swordPickedUp.initialValue)
+        {
+            //pickupquest
+        }
     }
 }

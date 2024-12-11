@@ -2360,6 +2360,9 @@ MonoBehaviour:
   messageDuration: 3
   interactText: {fileID: 1867262571}
   SwordPickedUp: {fileID: 11400000, guid: 1f085a990da31f34fbb01ea539f57b6d, type: 2}
+  BowPickedUp: {fileID: 11400000, guid: 7e84f064f9abe4348835a23f0d42325c, type: 2}
+  Bow: 0
+  Sword: 1
 --- !u!95 &864192656
 Animator:
   serializedVersion: 7
@@ -2636,6 +2639,7 @@ MonoBehaviour:
   arrowPrefab: {fileID: 3351039545906056351, guid: 026e98ca5650b6e48ac807d658985162, type: 3}
   arrowSpeed: 12
   maxRange: 4
+  BowPickedUp: {fileID: 11400000, guid: 7e84f064f9abe4348835a23f0d42325c, type: 2}
 --- !u!61 &1249322536
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2859,7 +2863,7 @@ Transform:
   m_GameObject: {fileID: 1249322534}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.235, y: 2.065, z: 0}
+  m_LocalPosition: {x: -0.52, y: 1.23, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
