@@ -14,6 +14,7 @@ public enum EnemyState
 
 public class Enemy : MonoBehaviour
 {
+    private static Enemy instance;
     public EnemyState currentState;
     public FloatValue maxHealth;
     public float health;
@@ -22,10 +23,21 @@ public class Enemy : MonoBehaviour
     public float moveSpeed;
     private Animator animator;
     public GameObject deathEffect;
+    public FloatValue totalEnemiesBrokenCity;
+    
 
     private void Awake()
     {
         health = maxHealth.initialValue;
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject); // Houd dit object in alle scenes
+        }
+        else
+        {
+            Destroy(gameObject); // Verwijder duplicaten
+        }
     }
 
     private void TakeDamage(float damage)
@@ -36,6 +48,7 @@ public class Enemy : MonoBehaviour
             //currentState = EnemyState.dying;
             //animator.SetBool("dying", true);
             DeathEffect();
+            totalEnemiesBrokenCity.RuntimeValue --;
             this.gameObject.SetActive(false);
         }
         

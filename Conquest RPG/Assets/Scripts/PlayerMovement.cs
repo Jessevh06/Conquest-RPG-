@@ -48,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
         change.y = Input.GetAxisRaw("Vertical");
         if (Input.GetButtonDown("attack") && currentState != PlayerState.attack && currentState != PlayerState.stagger)
         {
-            if (SwordPickedUp.RuntimeValue)
+            if (SwordPickedUp.initialValue)
             {
                
                 StartCoroutine(AttackCo());

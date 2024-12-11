@@ -97,11 +97,11 @@ public class chest : MonoBehaviour
             {
                 if (Sword)
                 {
-                    SwordPickedUp.RuntimeValue = true;
+                    SwordPickedUp.initialValue = true;
                 }
                 if (Bow)
                 {
-                    BowPickedUp.RuntimeValue = true;
+                    BowPickedUp.initialValue = true;
                 }
                 //playerMovement.SetCanAttack(true);
                 playerMovement.currentState = PlayerState.walk;

@@ -14,8 +14,9 @@ public class Bow : MonoBehaviour
 
     void Start()
     {
-        // Zoek naar de crosshair object in de scene (moet de tag 'Crosshair' hebben)
-        crossHair = GameObject.FindGameObjectWithTag("crossHair");
+        
+            // Zoek naar de crosshair object in de scene (moet de tag 'Crosshair' hebben)
+            crossHair = GameObject.FindGameObjectWithTag("crossHair");
         if (crossHair != null)
         {
             crossHair.SetActive(false);  // Start zonder crosshair
@@ -27,7 +28,7 @@ public class Bow : MonoBehaviour
 
     void Update()
     {
-        if (BowPickedUp.RuntimeValue)
+        if (BowPickedUp.initialValue)
         {
 
 
