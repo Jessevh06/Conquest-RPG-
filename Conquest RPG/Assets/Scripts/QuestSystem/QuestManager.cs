@@ -5,6 +5,13 @@ public class QuestManager : MonoBehaviour
 {
     public List<Quest> quests;
     public BoolValue swordPickedUp;
+    public Quest SwordPickUpQuest;
+    public BoolValue bowPickedUp;
+    public Quest BowPickUpQuest;
+    public Quest TalkToBobQuest;
+    public Quest GoBackToBobQuest;
+    public Quest KillEnemiesQuest;
+    public NPCInteraction NPCInteraction;
 
     // Voeg quest toe aan de lijst
     public void AddQuest(Quest quest)
@@ -26,7 +33,19 @@ public class QuestManager : MonoBehaviour
     {
         if (swordPickedUp.initialValue)
         {
-            //pickupquest
+            CompleteQuest(SwordPickUpQuest);
+          
+        }
+
+        if (bowPickedUp.initialValue)
+        {
+            CompleteQuest(BowPickUpQuest);
+            AddQuest(GoBackToBobQuest);
+        }
+
+        if (GoBackToBobQuest.isCompleted)
+        {
+            AddQuest(KillEnemiesQuest);
         }
     }
 }
