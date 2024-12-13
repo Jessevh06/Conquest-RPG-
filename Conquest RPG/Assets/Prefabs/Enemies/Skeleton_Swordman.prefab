@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 7097840509622800203}
   - component: {fileID: 8431074907288600640}
   - component: {fileID: 4432071219934427686}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Skeleton_Swordman
   m_TagString: enemy
   m_Icon: {fileID: 0}
@@ -190,9 +190,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 2049432569
-  m_SortingLayer: 4
-  m_SortingOrder: 10
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: -2139014974517455860, guid: 0fc2da2c83c75e94baebfa60c6e0ded5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

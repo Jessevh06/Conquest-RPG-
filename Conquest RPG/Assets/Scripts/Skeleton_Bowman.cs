@@ -28,6 +28,7 @@ public class Skeleton_Bowman : Enemy
         currentState = EnemyState.idle;
         myRigidbody = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        target = GameObject.FindWithTag("Player").transform;
     }
 
     void UpdateTarget()

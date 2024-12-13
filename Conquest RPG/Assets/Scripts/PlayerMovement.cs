@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem.XR.Haptics;
@@ -22,8 +23,8 @@ public class PlayerMovement : MonoBehaviour
     public Signal playerHealthSignal;
     public VectorValue startingPosition;
     public BoolValue SwordPickedUp;
-    
 
+    
     //private bool canAttack = false;
     
 
@@ -60,9 +61,6 @@ public class PlayerMovement : MonoBehaviour
         {
             UpdateAnimationAndMove();
         }
-
-     
-
 
 
 
