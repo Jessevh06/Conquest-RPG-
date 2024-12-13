@@ -13,4 +13,3 @@ MonoBehaviour:
   m_Name: BowPickedUp
   m_EditorClassIdentifier: 
   initialValue: 0
-  RuntimeValue: 1
