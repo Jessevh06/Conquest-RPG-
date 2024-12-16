@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e87059a085e2164f9d3e8d24ac31b6b, type: 3}
   m_Name: TotalEnemiesBrokenCity
   m_EditorClassIdentifier: 
-  initialValue: -1
+  initialValue: 5
