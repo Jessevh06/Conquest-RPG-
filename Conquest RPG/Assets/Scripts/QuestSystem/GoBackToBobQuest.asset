@@ -9,7 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f3d581290a96f24bbae1cf90a65d80b, type: 3}
-  m_Name: BowPickedUp
+  m_Script: {fileID: 11500000, guid: 7b4577b3e243b404f972dc0329e3a8bb, type: 3}
+  m_Name: GoBackToBobQuest
   m_EditorClassIdentifier: 
-  initialValue: 0
+  questName: Go back to Bob
+  description: Bring the found bow back to Bob.
+  isCompleted: 0

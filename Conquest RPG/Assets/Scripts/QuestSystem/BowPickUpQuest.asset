@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7b4577b3e243b404f972dc0329e3a8bb, type: 3}
-  m_Name: PickUpQuest
+  m_Name: BowPickUpQuest
   m_EditorClassIdentifier: 
-  questName: 'Lost ''n Found '
-  description: I lost my sword somewhere in town, can you help me and find it for
-    me?
+  questName: The Hidden Bow
+  description: My bow is lost deep inside a cave near the farm. I cannot face the
+    dangers alone. I would be incredibly grateful if you could recover it for me.
   isCompleted: 0
