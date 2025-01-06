@@ -34,6 +34,7 @@ public class QuestManager : MonoBehaviour
         if (swordPickedUp.initialValue)
         {
             CompleteQuest(SwordPickUpQuest);
+            AddQuest(KillEnemiesQuest);
           
         }
 

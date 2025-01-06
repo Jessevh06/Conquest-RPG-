@@ -98,6 +98,7 @@ public class chest : MonoBehaviour
                 if (Sword)
                 {
                     SwordPickedUp.initialValue = true;
+                    
                 }
                 if (Bow)
                 {

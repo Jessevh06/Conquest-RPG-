@@ -790,11 +790,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5447692285716109234, guid: 56ed72d9c2d6ba14fb91ccf166d0f7ae, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.8
+      value: -4.3129573
       objectReference: {fileID: 0}
     - target: {fileID: 5447692285716109234, guid: 56ed72d9c2d6ba14fb91ccf166d0f7ae, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.25
+      value: -0.7745058
       objectReference: {fileID: 0}
     - target: {fileID: 5447692285716109234, guid: 56ed72d9c2d6ba14fb91ccf166d0f7ae, type: 3}
       propertyPath: m_LocalPosition.z
@@ -28018,6 +28018,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skeleton_Bowman
       objectReference: {fileID: 0}
+    - target: {fileID: 4988392582537055842, guid: a2fd4ef4bba5de04eb4575e36418bde9, type: 3}
+      propertyPath: fireRate
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 6541423074207566675, guid: a2fd4ef4bba5de04eb4575e36418bde9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.22330666
@@ -35565,11 +35569,13 @@ MonoBehaviour:
   quests:
   - {fileID: 11400000, guid: e83d8112f1b20e04d900d0b0cc72cf46, type: 2}
   swordPickedUp: {fileID: 11400000, guid: 1f085a990da31f34fbb01ea539f57b6d, type: 2}
-  SwordPickUpQuest: {fileID: 0}
-  bowPickedUp: {fileID: 0}
-  BowPickUpQuest: {fileID: 0}
-  TalkToBobQuest: {fileID: 0}
-  GoBackToBobQuest: {fileID: 0}
+  SwordPickUpQuest: {fileID: 11400000, guid: e83d8112f1b20e04d900d0b0cc72cf46, type: 2}
+  bowPickedUp: {fileID: 11400000, guid: 7e84f064f9abe4348835a23f0d42325c, type: 2}
+  BowPickUpQuest: {fileID: 11400000, guid: a160c75422b88c94980d587b23d48a9a, type: 2}
+  TalkToBobQuest: {fileID: 11400000, guid: 479d3233c8414294dbd95440dee5eae0, type: 2}
+  GoBackToBobQuest: {fileID: 11400000, guid: 3088f8c46e2500a4384d618d9b750435, type: 2}
+  KillEnemiesQuest: {fileID: 11400000, guid: a3f2e66e05b7d4b41a1f86112c6d075b, type: 2}
+  NPCInteraction: {fileID: 0}
 --- !u!4 &2137940424
 Transform:
   m_ObjectHideFlags: 0
@@ -35669,11 +35675,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3246739044739543725, guid: 10705d89a78ad88459462bfeb0e73eab, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.5
+      value: -7.5194855
       objectReference: {fileID: 0}
     - target: {fileID: 3246739044739543725, guid: 10705d89a78ad88459462bfeb0e73eab, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4
+      value: -3.1686258
       objectReference: {fileID: 0}
     - target: {fileID: 3246739044739543725, guid: 10705d89a78ad88459462bfeb0e73eab, type: 3}
       propertyPath: m_LocalPosition.z
