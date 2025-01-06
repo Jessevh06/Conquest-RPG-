@@ -363,15 +363,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67e6495f9289bae47b17725abb34aea7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quests:
-  - {fileID: 11400000, guid: e83d8112f1b20e04d900d0b0cc72cf46, type: 2}
-  - {fileID: 11400000, guid: a160c75422b88c94980d587b23d48a9a, type: 2}
+  quests: []
   swordPickedUp: {fileID: 11400000, guid: 1f085a990da31f34fbb01ea539f57b6d, type: 2}
   SwordPickUpQuest: {fileID: 11400000, guid: e83d8112f1b20e04d900d0b0cc72cf46, type: 2}
   bowPickedUp: {fileID: 11400000, guid: 7e84f064f9abe4348835a23f0d42325c, type: 2}
   BowPickUpQuest: {fileID: 11400000, guid: a160c75422b88c94980d587b23d48a9a, type: 2}
   TalkToBobQuest: {fileID: 11400000, guid: 479d3233c8414294dbd95440dee5eae0, type: 2}
   GoBackToBobQuest: {fileID: 11400000, guid: 3088f8c46e2500a4384d618d9b750435, type: 2}
+  KillEnemiesQuest: {fileID: 11400000, guid: a3f2e66e05b7d4b41a1f86112c6d075b, type: 2}
+  NPCInteraction: {fileID: 0}
 --- !u!4 &218520701
 Transform:
   m_ObjectHideFlags: 0
@@ -1188,6 +1188,18 @@ PrefabInstance:
       propertyPath: swordPrefab
       value: 
       objectReference: {fileID: 8532461993669809483, guid: 27bed2d831311b44db4e86eb9aa4dde0, type: 3}
+    - target: {fileID: 3849992870042029426, guid: e789416337c030f4fa890993ffbe5802, type: 3}
+      propertyPath: QuestManager
+      value: 
+      objectReference: {fileID: 218520700}
+    - target: {fileID: 3849992870042029426, guid: e789416337c030f4fa890993ffbe5802, type: 3}
+      propertyPath: BowPickupQuest
+      value: 
+      objectReference: {fileID: 11400000, guid: a160c75422b88c94980d587b23d48a9a, type: 2}
+    - target: {fileID: 3849992870042029426, guid: e789416337c030f4fa890993ffbe5802, type: 3}
+      propertyPath: GoBackToBobQuest
+      value: 
+      objectReference: {fileID: 11400000, guid: 3088f8c46e2500a4384d618d9b750435, type: 2}
     - target: {fileID: 6560591228394171856, guid: e789416337c030f4fa890993ffbe5802, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
@@ -29946,7 +29958,7 @@ MonoBehaviour:
   arrowPrefab: {fileID: 3351039545906056351, guid: 026e98ca5650b6e48ac807d658985162, type: 3}
   arrowSpeed: 12
   maxRange: 4
-  BowPickedUp: {fileID: 0}
+  BowPickedUp: {fileID: 11400000, guid: 7e84f064f9abe4348835a23f0d42325c, type: 2}
 --- !u!1 &1115422710 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5670632014260055643, guid: 29522f2f013e2214b990ba4861c36d4e, type: 3}

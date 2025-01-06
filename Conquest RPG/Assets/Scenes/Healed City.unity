@@ -21916,6 +21916,8 @@ MonoBehaviour:
   BowPickUpQuest: {fileID: 11400000, guid: a160c75422b88c94980d587b23d48a9a, type: 2}
   TalkToBobQuest: {fileID: 11400000, guid: 479d3233c8414294dbd95440dee5eae0, type: 2}
   GoBackToBobQuest: {fileID: 11400000, guid: 3088f8c46e2500a4384d618d9b750435, type: 2}
+  KillEnemiesQuest: {fileID: 0}
+  NPCInteraction: {fileID: 0}
 --- !u!4 &854034876
 Transform:
   m_ObjectHideFlags: 0
@@ -29362,7 +29364,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: 0
-  speed: 3
+  speed: 8
   currentHealth: {fileID: 11400000, guid: 6a58dc0fdd944514da85fc17a3e83397, type: 2}
   playerHealthSignal: {fileID: 11400000, guid: bb2ea44b29fbc134b8669e549ba584d9, type: 2}
   startingPosition: {fileID: 11400000, guid: 65041ee2b8e080b40810224e0b6481f5, type: 2}
@@ -52174,6 +52176,10 @@ PrefabInstance:
     - target: {fileID: 4226460306267087919, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5178859725144280271, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -19,6 +19,9 @@ public class chest : MonoBehaviour
     private bool isChestOpen = false;
     public bool Bow;
     public bool Sword;
+    public QuestManager QuestManager;
+    public Quest BowPickupQuest;
+    public Quest GoBackToBobQuest;
     
 
     private PlayerMovement playerMovement;
@@ -98,10 +101,13 @@ public class chest : MonoBehaviour
                 if (Sword)
                 {
                     SwordPickedUp.initialValue = true;
+                    
                 }
                 if (Bow)
                 {
                     BowPickedUp.initialValue = true;
+                    QuestManager.CompleteQuest(BowPickupQuest);
+                    QuestManager.AddQuest(BowPickupQuest);
                 }
                 //playerMovement.SetCanAttack(true);
                 playerMovement.currentState = PlayerState.walk;

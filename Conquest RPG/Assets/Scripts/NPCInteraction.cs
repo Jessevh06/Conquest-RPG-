@@ -14,6 +14,7 @@ public class NPCInteraction : MonoBehaviour
     private bool isDetailVisible = false; // Controleert of de detailtekst zichtbaar is
     private bool isSecondTextVisible = false; // Houdt bij of de tweede tekst wordt getoond
     public QuestGiver QuestGiver;
+    public bool IsInteracting;
 
     private void Start()
     {
@@ -48,10 +49,11 @@ public class NPCInteraction : MonoBehaviour
             {
                 ToggleDetailText();
                 QuestGiver.EnableQuestUI();
+                IsInteracting = true;
             }
 
             // Als detailtekst zichtbaar is, luister naar spatie
-            if (isDetailVisible && Input.GetKeyDown(KeyCode.Space))
+            if (isDetailVisible && Input.GetKeyDown(KeyCode.R))
             {
                 ShowNextText();
             }
@@ -125,6 +127,7 @@ public class NPCInteraction : MonoBehaviour
             isSecondTextVisible = false; // Reset de tweede tekst
             anim?.SetBool("moving", true); // Start NPC animatie
             npcMovement?.StopInteraction(); // Start NPC beweging
+            IsInteracting = false;
         }
     }
 }

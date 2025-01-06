@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8068599110794933024}
   - component: {fileID: 3040627176970134436}
   - component: {fileID: 2092169393198428040}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: hit box up
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 318410330937962919}
   - component: {fileID: 4131079760268360178}
   - component: {fileID: 5506614178238737992}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -197,8 +197,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 499710525
-  m_SortingLayer: 3
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 6
   m_Sprite: {fileID: -2311659948842064771, guid: e36687fb1cb3b2e459cf3fe9675bff5f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -397,7 +397,7 @@ GameObject:
   - component: {fileID: 627158985165358711}
   - component: {fileID: 9131662487727553033}
   - component: {fileID: 950498506031033589}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: hit box down
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -513,7 +513,7 @@ GameObject:
   - component: {fileID: 2153089461318574091}
   - component: {fileID: 3667575351418911504}
   - component: {fileID: 3440769406415092672}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: hit box right
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -619,7 +619,7 @@ GameObject:
   - component: {fileID: 3245714311198900991}
   - component: {fileID: 3823011654361608472}
   - component: {fileID: 6604414483503028234}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: hit box left
   m_TagString: Player
   m_Icon: {fileID: 0}

@@ -37,10 +37,15 @@ public class QuestManager : MonoBehaviour
           
         }
 
+        if (TalkToBobQuest && NPCInteraction.IsInteracting)
+        {
+            CompleteQuest(TalkToBobQuest);
+            AddQuest(BowPickUpQuest);
+        }
+      
         if (bowPickedUp.initialValue)
         {
             CompleteQuest(BowPickUpQuest);
-            AddQuest(GoBackToBobQuest);
         }
 
         if (GoBackToBobQuest.isCompleted)
