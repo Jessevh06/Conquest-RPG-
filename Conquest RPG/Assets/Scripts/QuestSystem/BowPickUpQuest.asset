@@ -15,4 +15,4 @@ MonoBehaviour:
   questName: The Hidden Bow
   description: My bow is lost deep inside a cave near the farm. I cannot face the
     dangers alone. I would be incredibly grateful if you could recover it for me.
-  isCompleted: 0
+  isCompleted: 1
