@@ -1,2 +1,19 @@
 fileFormatVersion: 2
 guid: 67e6495f9289bae47b17725abb34aea7
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - swordPickedUp: {fileID: 11400000, guid: 1f085a990da31f34fbb01ea539f57b6d, type: 2}
+  - SwordPickUpQuest: {fileID: 11400000, guid: e83d8112f1b20e04d900d0b0cc72cf46, type: 2}
+  - bowPickedUp: {fileID: 11400000, guid: 7e84f064f9abe4348835a23f0d42325c, type: 2}
+  - BowPickUpQuest: {fileID: 11400000, guid: a160c75422b88c94980d587b23d48a9a, type: 2}
+  - TalkToBobQuest: {fileID: 11400000, guid: 479d3233c8414294dbd95440dee5eae0, type: 2}
+  - GoBackToBobQuest: {fileID: 11400000, guid: 3088f8c46e2500a4384d618d9b750435, type: 2}
+  - KillEnemiesQuest: {fileID: 11400000, guid: a3f2e66e05b7d4b41a1f86112c6d075b, type: 2}
+  - NPCInteraction: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

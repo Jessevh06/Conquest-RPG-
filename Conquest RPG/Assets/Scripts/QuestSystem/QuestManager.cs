@@ -34,8 +34,9 @@ public class QuestManager : MonoBehaviour
         if (swordPickedUp.initialValue)
         {
             CompleteQuest(SwordPickUpQuest);
-          
+            AddQuest(KillEnemiesQuest);
         }
+
 
         if (TalkToBobQuest && NPCInteraction.IsInteracting)
         {
@@ -46,11 +47,7 @@ public class QuestManager : MonoBehaviour
         if (bowPickedUp.initialValue)
         {
             CompleteQuest(BowPickUpQuest);
-        }
-
-        if (GoBackToBobQuest.isCompleted)
-        {
-            AddQuest(KillEnemiesQuest);
+            
         }
     }
 }

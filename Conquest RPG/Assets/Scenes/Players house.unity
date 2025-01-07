@@ -325,7 +325,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 311837049}
-  - component: {fileID: 311837048}
+  - component: {fileID: 311837050}
   m_Layer: 0
   m_Name: QuestManager
   m_TagString: Untagged
@@ -333,28 +333,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &311837048
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 311837047}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67e6495f9289bae47b17725abb34aea7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  quests:
-  - {fileID: 11400000, guid: e83d8112f1b20e04d900d0b0cc72cf46, type: 2}
-  swordPickedUp: {fileID: 11400000, guid: 1f085a990da31f34fbb01ea539f57b6d, type: 2}
-  SwordPickUpQuest: {fileID: 11400000, guid: e83d8112f1b20e04d900d0b0cc72cf46, type: 2}
-  bowPickedUp: {fileID: 0}
-  BowPickUpQuest: {fileID: 0}
-  TalkToBobQuest: {fileID: 0}
-  GoBackToBobQuest: {fileID: 0}
-  KillEnemiesQuest: {fileID: 0}
-  NPCInteraction: {fileID: 0}
 --- !u!4 &311837049
 Transform:
   m_ObjectHideFlags: 0
@@ -370,6 +348,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &311837050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 311837047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67e6495f9289bae47b17725abb34aea7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quests:
+  - {fileID: 11400000, guid: e83d8112f1b20e04d900d0b0cc72cf46, type: 2}
+  swordPickedUp: {fileID: 11400000, guid: 1f085a990da31f34fbb01ea539f57b6d, type: 2}
+  SwordPickUpQuest: {fileID: 11400000, guid: e83d8112f1b20e04d900d0b0cc72cf46, type: 2}
+  bowPickedUp: {fileID: 11400000, guid: 7e84f064f9abe4348835a23f0d42325c, type: 2}
+  BowPickUpQuest: {fileID: 11400000, guid: a160c75422b88c94980d587b23d48a9a, type: 2}
+  TalkToBobQuest: {fileID: 11400000, guid: 479d3233c8414294dbd95440dee5eae0, type: 2}
+  GoBackToBobQuest: {fileID: 11400000, guid: 3088f8c46e2500a4384d618d9b750435, type: 2}
+  KillEnemiesQuest: {fileID: 11400000, guid: a3f2e66e05b7d4b41a1f86112c6d075b, type: 2}
+  NPCInteraction: {fileID: 0}
 --- !u!1 &363478309
 GameObject:
   m_ObjectHideFlags: 0
@@ -19586,7 +19586,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d95c9166a6f323c44a187ac69af66bb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questManager: {fileID: 311837048}
+  questManager: {fileID: 311837050}
   questText: {fileID: 1221985394}
   descriptionText: {fileID: 1206180996}
 --- !u!4 &1905817268

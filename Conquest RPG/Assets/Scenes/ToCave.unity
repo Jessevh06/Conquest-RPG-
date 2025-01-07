@@ -30855,7 +30855,7 @@ MonoBehaviour:
   BowPickUpQuest: {fileID: 11400000, guid: a160c75422b88c94980d587b23d48a9a, type: 2}
   TalkToBobQuest: {fileID: 11400000, guid: 479d3233c8414294dbd95440dee5eae0, type: 2}
   GoBackToBobQuest: {fileID: 11400000, guid: 3088f8c46e2500a4384d618d9b750435, type: 2}
-  KillEnemiesQuest: {fileID: 0}
+  KillEnemiesQuest: {fileID: 11400000, guid: a3f2e66e05b7d4b41a1f86112c6d075b, type: 2}
   NPCInteraction: {fileID: 8444511273645587276}
 --- !u!4 &611835992
 Transform:
@@ -80957,11 +80957,19 @@ PrefabInstance:
     - target: {fileID: 1836905165241661328, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
       propertyPath: QuestGiver
       value: 
-      objectReference: {fileID: 8444511273645587275}
+      objectReference: {fileID: 0}
+    - target: {fileID: 1836905165241661328, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
+      propertyPath: QuestManager
+      value: 
+      objectReference: {fileID: 611835991}
     - target: {fileID: 1836905165241661328, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
       propertyPath: detailCanvas
       value: 
       objectReference: {fileID: 1853706163}
+    - target: {fileID: 1836905165241661328, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
+      propertyPath: TalkToBobQuest
+      value: 
+      objectReference: {fileID: 11400000, guid: a160c75422b88c94980d587b23d48a9a, type: 2}
     - target: {fileID: 1836905165241661328, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
       propertyPath: interactionPrompt
       value: Press "E" to interact
@@ -81106,39 +81114,14 @@ PrefabInstance:
     - {fileID: 2849036482823875446, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
     - {fileID: 1500798381317604205, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3702631424509594358, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8444511273645587275}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
---- !u!1 &8444511273645587274 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3702631424509594358, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
-  m_PrefabInstance: {fileID: 8444511273645587273}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &8444511273645587275
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8444511273645587274}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32780efba213f3646a74a0966fc43ee3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questManager: {fileID: 611835991}
-  questsToGive:
-  - {fileID: 11400000, guid: a160c75422b88c94980d587b23d48a9a, type: 2}
-  questUI: {fileID: 2080905402}
-  NPCInteraction: {fileID: 8444511273645587276}
 --- !u!114 &8444511273645587276 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1836905165241661328, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
   m_PrefabInstance: {fileID: 8444511273645587273}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8444511273645587274}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6ebc485344bf8cb49b1755af7c67378e, type: 3}

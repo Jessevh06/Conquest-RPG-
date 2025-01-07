@@ -15,4 +15,4 @@ MonoBehaviour:
   questName: The Lost Sword
   description: "I\u2019ve lost my sword in an area overrun by skeletons. It\u2019s
     too dangerous for me to go back there. Could you help me retrieve it?"
-  isCompleted: 0
+  isCompleted: 1

@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questName: Talk to Bob
   description: Ask Bob what he needs help with.
-  isCompleted: 0
+  isCompleted: 1

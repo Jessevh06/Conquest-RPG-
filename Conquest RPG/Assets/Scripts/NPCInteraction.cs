@@ -12,8 +12,9 @@ public class NPCInteraction : MonoBehaviour
     private NPCmovement npcMovement; // Referentie naar het NPCmovement-script
     public Animator anim; // Animator van de NPC
     private bool isDetailVisible = false; // Controleert of de detailtekst zichtbaar is
-    private bool isSecondTextVisible = false; // Houdt bij of de tweede tekst wordt getoond
-    public QuestGiver QuestGiver;
+    private bool isSecondTextVisible = false; // Houdt bij of de tweede tekst wordt getoon
+    public Quest TalkToBobQuest;
+    public QuestManager QuestManager;
     public bool IsInteracting;
 
     private void Start()
@@ -48,7 +49,7 @@ public class NPCInteraction : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 ToggleDetailText();
-                QuestGiver.EnableQuestUI();
+                QuestManager.AddQuest(TalkToBobQuest);
                 IsInteracting = true;
             }
 

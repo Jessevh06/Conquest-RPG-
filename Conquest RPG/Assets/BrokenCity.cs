@@ -10,6 +10,7 @@ public class BrokenCity : MonoBehaviour
     public string sceneToLoad;
     public Vector2 PlayerPosition;
     public VectorValue playerStorage;
+    public Quest TotalEnemiesBrokenCityQuest;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -23,6 +24,9 @@ public class BrokenCity : MonoBehaviour
         {
             SceneManager.LoadScene(sceneToLoad);
             playerStorage.initialValue = PlayerPosition;
+            TotalEnemiesBrokenCityQuest.isCompleted = true;
+
+            
         }
     }
 }
