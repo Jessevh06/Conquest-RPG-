@@ -267,7 +267,7 @@ GameObject:
   - component: {fileID: 142417436}
   - component: {fileID: 142417438}
   - component: {fileID: 142417437}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: hit box up
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -2194,7 +2194,7 @@ GameObject:
   - component: {fileID: 475738064}
   - component: {fileID: 475738066}
   - component: {fileID: 475738065}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: hit box left
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -2399,7 +2399,7 @@ GameObject:
   - component: {fileID: 1249322537}
   - component: {fileID: 1249322536}
   - component: {fileID: 1249322535}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -2421,6 +2421,7 @@ MonoBehaviour:
   arrowPrefab: {fileID: 3351039545906056351, guid: 026e98ca5650b6e48ac807d658985162, type: 3}
   arrowSpeed: 12
   maxRange: 4
+  BowPickedUp: {fileID: 11400000, guid: 7e84f064f9abe4348835a23f0d42325c, type: 2}
 --- !u!61 &1249322536
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2579,6 +2580,7 @@ MonoBehaviour:
   currentHealth: {fileID: 11400000, guid: 6a58dc0fdd944514da85fc17a3e83397, type: 2}
   playerHealthSignal: {fileID: 11400000, guid: bb2ea44b29fbc134b8669e549ba584d9, type: 2}
   startingPosition: {fileID: 11400000, guid: 65041ee2b8e080b40810224e0b6481f5, type: 2}
+  SwordPickedUp: {fileID: 11400000, guid: 1f085a990da31f34fbb01ea539f57b6d, type: 2}
 --- !u!212 &1249322541
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2643,7 +2645,7 @@ Transform:
   m_GameObject: {fileID: 1249322534}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1, y: 1, z: 0}
+  m_LocalPosition: {x: -4.9, y: 2.099, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3314,7 +3316,7 @@ GameObject:
   - component: {fileID: 1869505043}
   - component: {fileID: 1869505045}
   - component: {fileID: 1869505044}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: hit box right
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -3420,7 +3422,7 @@ GameObject:
   - component: {fileID: 1897592616}
   - component: {fileID: 1897592618}
   - component: {fileID: 1897592617}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: hit box down
   m_TagString: Player
   m_Icon: {fileID: 0}

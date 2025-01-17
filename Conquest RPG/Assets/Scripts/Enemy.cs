@@ -8,8 +8,6 @@ public enum EnemyState
     walk,
     attack,
     stagger
-    //dying,
-    //dead
 }
 
 public class Enemy : MonoBehaviour
