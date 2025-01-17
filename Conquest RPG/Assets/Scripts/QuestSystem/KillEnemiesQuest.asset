@@ -13,6 +13,5 @@ MonoBehaviour:
   m_Name: KillEnemiesQuest
   m_EditorClassIdentifier: 
   questName: Skeleton Invasion
-  description: My bow is lost deep inside a cave near the farm. I cannot face the
-    dangers alone. I would be incredibly grateful if you could recover it for me.
+  description: Kill all remaining enemies to save the city.
   isCompleted: 0

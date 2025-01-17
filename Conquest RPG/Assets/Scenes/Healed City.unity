@@ -1958,7 +1958,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d95c9166a6f323c44a187ac69af66bb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questManager: {fileID: 854034875}
+  questManager: {fileID: 854034877}
   questText: {fileID: 804476777}
   descriptionText: {fileID: 391544893}
 --- !u!4 &399398958
@@ -21887,7 +21887,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 854034876}
-  - component: {fileID: 854034875}
+  - component: {fileID: 854034877}
   m_Layer: 0
   m_Name: QuestManager
   m_TagString: Untagged
@@ -21895,29 +21895,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &854034875
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 854034874}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67e6495f9289bae47b17725abb34aea7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  quests:
-  - {fileID: 11400000, guid: e83d8112f1b20e04d900d0b0cc72cf46, type: 2}
-  - {fileID: 11400000, guid: 479d3233c8414294dbd95440dee5eae0, type: 2}
-  swordPickedUp: {fileID: 11400000, guid: 1f085a990da31f34fbb01ea539f57b6d, type: 2}
-  SwordPickUpQuest: {fileID: 11400000, guid: e83d8112f1b20e04d900d0b0cc72cf46, type: 2}
-  bowPickedUp: {fileID: 11400000, guid: 7e84f064f9abe4348835a23f0d42325c, type: 2}
-  BowPickUpQuest: {fileID: 11400000, guid: a160c75422b88c94980d587b23d48a9a, type: 2}
-  TalkToBobQuest: {fileID: 11400000, guid: 479d3233c8414294dbd95440dee5eae0, type: 2}
-  GoBackToBobQuest: {fileID: 11400000, guid: 3088f8c46e2500a4384d618d9b750435, type: 2}
-  KillEnemiesQuest: {fileID: 0}
-  NPCInteraction: {fileID: 0}
 --- !u!4 &854034876
 Transform:
   m_ObjectHideFlags: 0
@@ -21933,6 +21910,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &854034877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 854034874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67e6495f9289bae47b17725abb34aea7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quests: []
+  swordPickedUp: {fileID: 11400000, guid: 1f085a990da31f34fbb01ea539f57b6d, type: 2}
+  SwordPickUpQuest: {fileID: 11400000, guid: e83d8112f1b20e04d900d0b0cc72cf46, type: 2}
+  bowPickedUp: {fileID: 11400000, guid: 7e84f064f9abe4348835a23f0d42325c, type: 2}
+  BowPickUpQuest: {fileID: 11400000, guid: a160c75422b88c94980d587b23d48a9a, type: 2}
+  TalkToBobQuest: {fileID: 11400000, guid: 479d3233c8414294dbd95440dee5eae0, type: 2}
+  GoBackToBobQuest: {fileID: 11400000, guid: 3088f8c46e2500a4384d618d9b750435, type: 2}
+  KillEnemiesQuest: {fileID: 11400000, guid: a3f2e66e05b7d4b41a1f86112c6d075b, type: 2}
+  NPCInteraction: {fileID: 0}
 --- !u!1 &877325828
 GameObject:
   m_ObjectHideFlags: 0
@@ -22287,7 +22285,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: Press 'E' to interact.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
@@ -47774,39 +47772,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f952dceb0e37b4e4fb2530f61b02c496, type: 3}
---- !u!1 &1491569941 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3702631424509594358, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
-  m_PrefabInstance: {fileID: 1635199829}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1491569942 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1836905165241661328, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
-  m_PrefabInstance: {fileID: 1635199829}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1491569941}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ebc485344bf8cb49b1755af7c67378e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1491569950
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1491569941}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32780efba213f3646a74a0966fc43ee3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questManager: {fileID: 854034875}
-  questsToGive:
-  - {fileID: 11400000, guid: 479d3233c8414294dbd95440dee5eae0, type: 2}
-  questUI: {fileID: 399398956}
-  NPCInteraction: {fileID: 1491569942}
 --- !u!4 &1495207385 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8511583416854305601, guid: f952dceb0e37b4e4fb2530f61b02c496, type: 3}
@@ -52068,10 +52033,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1500798381317604205, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1500798381317604205, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1836905165241661328, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
       propertyPath: QuestGiver
       value: 
-      objectReference: {fileID: 1491569950}
+      objectReference: {fileID: 0}
+    - target: {fileID: 1836905165241661328, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
+      propertyPath: QuestToGive
+      value: 
+      objectReference: {fileID: 11400000, guid: 479d3233c8414294dbd95440dee5eae0, type: 2}
+    - target: {fileID: 1836905165241661328, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
+      propertyPath: QuestManager
+      value: 
+      objectReference: {fileID: 854034877}
+    - target: {fileID: 1836905165241661328, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
+      propertyPath: TalkToBobQuest
+      value: 
+      objectReference: {fileID: 11400000, guid: 479d3233c8414294dbd95440dee5eae0, type: 2}
     - target: {fileID: 1836905165241661328, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
       propertyPath: interactionPrompt
       value: 'Press "E" to interact '
@@ -52092,10 +52077,42 @@ PrefabInstance:
     - target: {fileID: 1836905165241661328, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
       propertyPath: interactionPromptCanvas
       value: 
-      objectReference: {fileID: 2000735740}
+      objectReference: {fileID: 1312204083}
+    - target: {fileID: 1868340543485403311, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1868340543485403311, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2849036482823875446, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2849036482823875446, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 3108391129395857364, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
+      propertyPath: m_Mass
+      value: 1000000
+      objectReference: {fileID: 0}
     - target: {fileID: 3702631424509594358, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
       propertyPath: m_Name
       value: CaveNPC
+      objectReference: {fileID: 0}
+    - target: {fileID: 3702631424509594358, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3702631424509594358, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
+      propertyPath: m_TagString
+      value: NPC
+      objectReference: {fileID: 0}
+    - target: {fileID: 3702631424509594358, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4226460306267087919, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
       propertyPath: m_Pivot.x
@@ -52178,16 +52195,38 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5178859725144280271, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5178859725144280271, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5178859725144280271, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8397953440854968676, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8397953440854968676, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8796012861777575202, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8796012861777575202, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5178859725144280271, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3702631424509594358, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1491569950}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
 --- !u!1 &1642433193
 GameObject:
@@ -55777,11 +55816,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1994945451}
   m_CullTransparentMesh: 1
---- !u!1 &2000735740 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5178859725144280271, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
-  m_PrefabInstance: {fileID: 1635199829}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2004077988
 PrefabInstance:
   m_ObjectHideFlags: 0

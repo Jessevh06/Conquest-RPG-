@@ -90,15 +90,17 @@ public class NPCmovement : MonoBehaviour
         }
         else
         {
-            // Ga verder met de NPC bewegen zoals normaal
-            if (direction.x < 0 && !isFacingLeft)
-            {
-                Flip(true);
-            }
-            else if (direction.x > 0 && isFacingLeft)
-            {
-                Flip(false);
-            }
+            
+            
+                if (direction.x < 0 && !isFacingLeft)
+                {
+                    Flip(true);
+                }
+                else if (direction.x > 0 && isFacingLeft)
+                {
+                    Flip(false);
+                }
+            
         }
     }
 
