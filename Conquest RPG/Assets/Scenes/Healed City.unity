@@ -22285,7 +22285,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: Press 'E' to interact.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
@@ -52033,6 +52033,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1500798381317604205, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1500798381317604205, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1836905165241661328, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
       propertyPath: QuestGiver
       value: 
@@ -52069,10 +52077,42 @@ PrefabInstance:
     - target: {fileID: 1836905165241661328, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
       propertyPath: interactionPromptCanvas
       value: 
-      objectReference: {fileID: 2000735740}
+      objectReference: {fileID: 1312204083}
+    - target: {fileID: 1868340543485403311, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1868340543485403311, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2849036482823875446, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2849036482823875446, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 3108391129395857364, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
+      propertyPath: m_Mass
+      value: 1000000
+      objectReference: {fileID: 0}
     - target: {fileID: 3702631424509594358, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
       propertyPath: m_Name
       value: CaveNPC
+      objectReference: {fileID: 0}
+    - target: {fileID: 3702631424509594358, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3702631424509594358, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
+      propertyPath: m_TagString
+      value: NPC
+      objectReference: {fileID: 0}
+    - target: {fileID: 3702631424509594358, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4226460306267087919, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
       propertyPath: m_Pivot.x
@@ -52155,11 +52195,36 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5178859725144280271, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5178859725144280271, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5178859725144280271, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8397953440854968676, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8397953440854968676, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8796012861777575202, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8796012861777575202, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5178859725144280271, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
@@ -55751,11 +55816,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1994945451}
   m_CullTransparentMesh: 1
---- !u!1 &2000735740 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5178859725144280271, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
-  m_PrefabInstance: {fileID: 1635199829}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2004077988
 PrefabInstance:
   m_ObjectHideFlags: 0

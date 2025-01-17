@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questName: Skeleton Invasion
   description: Kill all remaining enemies to save the city.
-  isCompleted: 1
+  isCompleted: 0
