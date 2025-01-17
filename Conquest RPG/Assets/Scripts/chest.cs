@@ -107,7 +107,7 @@ public class chest : MonoBehaviour
                 {
                     BowPickedUp.initialValue = true;
                     QuestManager.CompleteQuest(BowPickupQuest);
-                    QuestManager.AddQuest(BowPickupQuest);
+                    QuestManager.AddQuest(GoBackToBobQuest);
                 }
                 //playerMovement.SetCanAttack(true);
                 playerMovement.currentState = PlayerState.walk;

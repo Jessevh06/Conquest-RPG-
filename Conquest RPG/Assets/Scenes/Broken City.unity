@@ -28086,7 +28086,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d95c9166a6f323c44a187ac69af66bb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questManager: {fileID: 2137940423}
+  questManager: {fileID: 2137940425}
   questText: {fileID: 699328593}
   descriptionText: {fileID: 1037908728}
 --- !u!4 &1186672782
@@ -29301,6 +29301,7 @@ MonoBehaviour:
   sceneToLoad: Healed City
   PlayerPosition: {x: -3, y: 0.6}
   playerStorage: {fileID: 11400000, guid: 65041ee2b8e080b40810224e0b6481f5, type: 2}
+  TotalEnemiesBrokenCityQuest: {fileID: 11400000, guid: a3f2e66e05b7d4b41a1f86112c6d075b, type: 2}
 --- !u!4 &1501682189
 Transform:
   m_ObjectHideFlags: 0
@@ -36578,7 +36579,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2137940424}
-  - component: {fileID: 2137940423}
+  - component: {fileID: 2137940425}
   m_Layer: 0
   m_Name: QuestManager
   m_TagString: Untagged
@@ -36586,7 +36587,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2137940423
+--- !u!4 &2137940424
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2137940422}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -20.410679, y: -0.66422534, z: -9.921684}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2137940425
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -36606,23 +36622,8 @@ MonoBehaviour:
   BowPickUpQuest: {fileID: 11400000, guid: a160c75422b88c94980d587b23d48a9a, type: 2}
   TalkToBobQuest: {fileID: 11400000, guid: 479d3233c8414294dbd95440dee5eae0, type: 2}
   GoBackToBobQuest: {fileID: 11400000, guid: 3088f8c46e2500a4384d618d9b750435, type: 2}
-  KillEnemiesQuest: {fileID: 0}
+  KillEnemiesQuest: {fileID: 11400000, guid: a3f2e66e05b7d4b41a1f86112c6d075b, type: 2}
   NPCInteraction: {fileID: 0}
---- !u!4 &2137940424
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2137940422}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20.410679, y: -0.66422534, z: -9.921684}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2145775513
 PrefabInstance:
   m_ObjectHideFlags: 0
