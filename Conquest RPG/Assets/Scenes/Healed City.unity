@@ -29502,8 +29502,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 499710525
+  m_SortingLayer: 3
   m_SortingOrder: 6
   m_Sprite: {fileID: -2311659948842064771, guid: e36687fb1cb3b2e459cf3fe9675bff5f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -51538,10 +51538,6 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
-    - target: {fileID: 1500798381317604205, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1836905165241661328, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
       propertyPath: QuestGiver
       value: 
@@ -51599,13 +51595,9 @@ PrefabInstance:
       propertyPath: m_Mass
       value: 1000000
       objectReference: {fileID: 0}
-    - target: {fileID: 1868340543485403311, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2849036482823875446, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
-      propertyPath: m_Layer
-      value: 0
+    - target: {fileID: 3108391129395857364, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
+      propertyPath: m_BodyType
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3702631424509594358, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
       propertyPath: m_Name
@@ -51617,15 +51609,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3702631424509594358, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
       propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3702631424509594358, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
-    - target: {fileID: 3702631424509594358, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
-      propertyPath: m_Layer
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3702631424509594358, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
       propertyPath: m_TagString
@@ -51727,37 +51711,29 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
-    - target: {fileID: 8397953440854968676, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8397953440854968676, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 8796012861777575202, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8796012861777575202, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 6668141269132238394, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
       propertyPath: m_SortingLayer
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6668141269132238394, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
       propertyPath: m_SortingLayerID
-      value: 0
+      value: 499710525
       objectReference: {fileID: 0}
     - target: {fileID: 8397953440854968676, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8397953440854968676, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8796012861777575202, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
       propertyPath: m_Layer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8796012861777575202, guid: 51a438e0a0ed4274685d0a4276ca9ac5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
